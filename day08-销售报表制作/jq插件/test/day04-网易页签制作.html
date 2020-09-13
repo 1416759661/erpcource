@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			*{
+				margin: 0;
+				padding: 0;
+				font-size: 14px;
+			}
+			#box1{
+				width: 310px;
+				height: 500px;
+				background-image: url(img/bg001.png);
+				background-repeat: repeat-x;
+				margin-left: 100px;
+				padding-top: 2px;
+			}
+			
+			.title{
+				list-style: none;
+				width: 310px;
+			}
+			.title li{
+				float:left;
+				width: 102px;
+				border-right:solid 1px #CFCFCF ;
+				height: 30px;
+				text-align: center;
+				line-height: 30px;
+			}
+			.title li.first{
+				border-left: solid 1px #CFCFCF;
+			}
+			.title li.current{
+				background-image: url(img/bg002.png);
+				background-repeat: repeat-x;
+				background-position: 0 -2px;
+			}
+	
+			.contentbox{
+				list-style: none;
+				width: 308px;
+				height:350px;
+				border: solid 1px #CFCFCF;
+			}
+			.contentbox li
+			{
+				width: 308px;
+				height:350px;
+				display: none;
+				overflow: hidden;
+			}
+			
+			.contentbox li.current
+			{
+				display: block;
+			}
+			
+		</style>
+	</head>
+	<body>
+		<div id="box1">
+			<ul class="title">
+				<li class="first current">女人</li>
+				<li>情感</li>
+				<li>亲子</li>
+			</ul>
+			<ul class="contentbox" display="none">
+				<li class="current">女人</li>
+				<li>情感</li>
+				<li>亲子</li>
+			</ul>
+		</div>
+		<script src="js/jquery-1.11.0.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			$(".title>li").mouseover(function(){
+				//点击标题里面的li，给当前的li加上current样式，将同辈的li隐藏
+				$(this).addClass("current").siblings().removeClass("current");
+				var index=$(".title>li").index(this);//index 是当前li在title下面的所有li中的索引  此处的index是一个变量，变量不能放字符串里面，放字符串里面就是字符串的一部分
+				//$(".contentbox>li").eq(index).show().siblings().hide();
+				$(".contentbox>li").hide().eq(index).show();
+				//$(".contentbox>li:eq("+index+")").show().siblings().hide();
+				
+			});
+		</script>
+	</body>
+</html>

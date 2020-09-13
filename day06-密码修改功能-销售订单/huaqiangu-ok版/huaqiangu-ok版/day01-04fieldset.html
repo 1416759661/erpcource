@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<form action="" method="post" >
+			<datalist  id="aa">
+				<option>大长腿</option>
+				<option>圣诞节</option>
+				<option>齐天大圣孙悟空</option>
+				<option>圣斗士</option>
+				<option>大大泡泡堂</option>
+				<option>圣人</option>
+			</datalist>
+			<fieldset>
+				<legend>性别</legend>
+				<p><label>用户名 </label><input type="email" placeholder="请输入email..." list="aa"/></p>
+				<p><label>年龄 </label><input type="number" placeholder="请输入数字..." /></p>
+				<p><label>分数范围 </label><input id="bb" type="range"  min="0" max="100" value="5"/></p>
+				<p><label>喜欢的颜色 </label><input id="cc" type="color" /></p>
+				<p><label>密码</label><input type="password" autofocus="autofocus"/></p>
+				<p><label>&nbsp;</label><input type="submit" value="注册"/></p>
+			</fieldset>
+		</form>
+		<script src="js/jquery-1.11.0.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			$("#bb").change(function(){
+				console.log($("#bb").val());
+			});
+			
+			$("#cc").change(function(){
+				$("body").css({"background-color":$("#cc").val()})
+			});
+		</script>
+	</body>
+</html>

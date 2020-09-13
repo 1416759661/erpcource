@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			*{
+				margin: 0;
+				padding: 0;
+			}
+			ul{
+				list-style: none;
+				width: 605px;
+				height: 35px;
+				margin: 100px;
+			}
+			
+			ul li{
+				width: 150px;
+				height:35px;
+				line-height: 35px;
+				float: left;
+				text-align: center;
+				border-right: solid 1px #fff;
+				border-bottom: solid 1px #fff;
+				background-color: #ff6600;
+				position: relative;
+				cursor: pointer;
+				color: white;
+			}
+			
+			ul li:first{
+				border-left: solid 1px #eee;
+			}
+			
+			.subnav{
+				width: 150px;
+				position: absolute;
+				top:35px;
+				left: 0;
+				background-color: #F2F2F2;
+				opacity: 0;
+				height: 0;
+				overflow: hidden;
+			}
+			
+			.subnav a{
+				display: block;
+				width: 150px;
+				text-decoration: none;
+				font-size: 14px;	
+				height:35px;
+				border-bottom: solid 1px #ccc;
+			}
+			.subnav a:last-child{
+				border-bottom: 0;
+			}
+			div.subnav{
+				transition: all 1s;
+			}
+			ul li:hover div.subnav{
+				opacity: 1;
+				height: 144px;
+			}
+		</style>
+	</head>
+	<body>
+		
+		
+			<ul>
+				<li class="first"><p>公司简介</p>
+					<div class="subnav">
+						<a href="###">关于我们</a>
+						<a href="###">成功案例</a>
+						<a href="###">资质荣誉</a>
+						<a href="###">联系我们</a>
+					</div>
+				</li>
+				<li><p>企业文化</p>
+					<div class="subnav">
+						<a href="###">关于我们</a>
+						<a href="###">成功案例</a>
+						<a href="###">资质荣誉</a>
+						<a href="###">联系我们</a>
+					</div>
+				</li>
+				<li><p>产品中心</p>
+					<div class="subnav">
+						<a href="###">关于我们</a>
+						<a href="###">成功案例</a>
+						<a href="###">资质荣誉</a>
+						<a href="###">联系我们</a>
+					</div>
+				</li>
+				<li><p>成功案例</p>
+					<div class="subnav">
+						<a href="###">关于我们</a>
+						<a href="###">成功案例</a>
+						<a href="###">资质荣誉</a>
+						<a href="###">联系我们</a>
+					</div>
+				</li>
+			</ul>
+		
+		
+	</body>
+</html>

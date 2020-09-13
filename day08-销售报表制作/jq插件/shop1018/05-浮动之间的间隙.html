@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			body{
+				margin: 0;
+				padding:0;	
+			}
+			
+			div{
+				margin-left: 10px;/*如果都是往左浮动的，尽量就用margin-right*/
+			}		
+		
+			#box1{
+				width:100px;
+				height:100px;
+				border:solid 1px red;
+				float: left;
+			}
+			
+			#box2{
+				width:100px;
+				height:100px;
+				border:solid 1px red;
+				float: left;
+			}
+			
+			#box3{
+				width:100px;
+				height:100px;
+				border:solid 1px red;
+				float: left;
+			}
+			
+			#box4{
+				width:100px;
+				height:100px;
+				border:solid 1px red;
+				float: left;
+			}
+			
+			/*在IE6 下面 一系列浮动的元素，如果携带了和浮动同方向的margin，那么首个元素就会出现双倍margin效果*/
+		</style>
+	</head>
+	<body>
+		<div id="box1">
+			1
+		</div>
+		<div id="box2">
+			2
+		</div>
+		<div id="box3">
+			3
+		</div>
+		<div id="box4">
+			4
+		</div>
+	</body>
+</html>

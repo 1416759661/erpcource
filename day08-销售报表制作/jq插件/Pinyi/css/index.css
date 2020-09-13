@@ -1,0 +1,340 @@
+/*关于品一开始*/
+#aboutus{
+	height: 288px;
+}
+.titlebox{
+	height:70px;
+	border-bottom: solid 1px #CBCBCB;
+}
+
+.innertitlebox{
+	width: 180px;
+	height: 52px;
+	text-align: center;
+	margin: 0 auto;
+	position: relative;
+	top:36px;
+	background-color: #fff;
+}
+
+#aboutus p.entitle{
+	font-size: 16px;
+	color: #626268;
+}
+
+#aboutus p.zhtitle{
+	font-size: 18px;
+	color: #D43B33;
+	font-weight: bold;
+}
+#aboutus .contentbox{
+	padding-top: 54px;
+}
+
+#aboutus .contentbox p{
+	line-height: 30px;
+	text-align: center;
+}
+#aboutus .contentbox p span{
+	font-weight: bold;
+}
+
+#aboutus .contentbox  a{
+	display: block;
+	background-image: url(../images/more_more_bg.png);
+	background-repeat: no-repeat;
+	width: 108px;
+	height:38px;
+	line-height:38px;
+	margin:0 auto;
+	text-align: center;
+	color: #333333;
+	margin-top: 35px;
+}
+/*关于品一结束*/
+
+/*企业文化开始*/
+#culture{
+	height: 348px;
+	padding-top: 58px;
+}
+
+.culturetitlebox{
+	
+	border-bottom: solid 1px #C0C0C0;
+}
+
+#culture .culturetitlebox ul
+{
+	width: 350px;
+	margin: 0 auto;
+	position: relative;
+	top:1px;
+}
+
+#culture .culturetitlebox ul li
+{
+	float:left;
+	width: 108px;
+	height: 34px;
+	line-height: 34px;
+	border: solid 1px #C0C0C0;
+	text-align: center;
+	font-size: 14px;
+	color: white;
+	background-color: #626262;
+	border-bottom: 0;
+	margin-right: 10px;
+}
+
+#culture .culturetitlebox ul li.lastli
+{
+	margin-right:0;
+}
+
+#culture .culturetitlebox ul li.current
+{
+	color: #D43B33;
+	background-color: white;
+	border-bottom: 0;
+}
+.culturecontent
+{
+
+	padding-top:40px;
+	padding-left: 116px;
+}
+.culturecontent img{
+	float: left;
+	margin-right: 40px;
+}
+.culturecontent .description{
+	float: left;
+}
+.culturecontent .description p{
+	line-height: 24px;
+}
+
+.culturecontent .description p.bolder
+{
+	font-weight: bolder;
+}
+/*企业文化结束*/
+
+/*项目开始*/
+#project{
+	height: 350px;
+	background-image: url(../images/index_02.png);
+	background-repeat: repeat-x;
+	
+}
+
+#project .projecttitle{
+	text-align: center;
+	color: #000000;
+	padding-top: 42px;
+}
+
+#project .projecttitle p.entitle
+{
+	font-size: 16px;
+}
+
+#project .projecttitle p.zhtitle
+{
+	font-size: 18px;
+	font-weight: bold;
+}
+
+.projectcontent
+{
+	padding-top: 48px;
+}
+
+.projectcontent span.btnleft{
+	display: block;
+	width: 20px;
+	height: 150px;
+	float: left;
+	margin-right:4px;
+	background-image: url(../images/btnleft.png);
+}
+
+.projectcontent ul
+{
+	width: 938px;
+	height:150px;
+	float: left;
+}
+
+.projectcontent span.btnright{
+	display: block;
+	width: 20px;
+	height: 150px;
+	float: left;
+	background-image: url(../images/btnright.png);
+}
+
+.projectcontent ul li
+{
+	float: left;
+	margin-right:2px;
+	position: relative;
+}
+
+.projectcontent ul li a img
+{
+	width: 310px;
+	height: 150px;
+	display: block;
+}
+
+.projectcontent ul li a.text
+{
+	position: absolute;
+	bottom: 0;
+	display: block;
+	width: 100%;
+	height: 30px;
+	line-height:30px;
+	text-align: center;
+	background-color: #000000;
+	color: white;
+	opacity:0.8;	
+}
+
+
+/*项目结束*/
+
+/*新闻留言板开始*/
+
+#newsguestbook{
+	height: 430px;
+	padding-top: 32px;
+	
+}
+#newsguestbook .ngleft{
+	float: left;
+	width: 462px;
+	height: 392px;
+	margin-right: 38px;
+	_margin-right:34px;/*兼容ie6加的样式*/
+}
+#newsguestbook .ngleft ul
+{
+	padding-top: 22px;
+}
+
+#newsguestbook .ngleft ul li
+{
+	height: 35px;
+	line-height: 35px;
+	border-bottom: dashed 1px #CACACA;
+	position: relative;
+}
+
+#newsguestbook .ngleft ul li a
+{
+	color: #332C2B;
+}
+
+#newsguestbook .ngleft ul li span
+{
+	position: absolute;
+	right: 0;
+	color: #CCCBCA;
+}
+
+#newsguestbook .ngleft a.viewmore
+{
+	font-size: 16px;
+	font-style: italic;
+	color: #333;
+	display: block;
+	margin-top: 22px;
+}
+#newsguestbook .ngright{
+	float: left;
+	width: 500px;
+	height: 392px;
+}
+
+#newsguestbook .entitle{
+	font-size: 14px;
+	color: black;
+}
+
+#newsguestbook .zhtitle
+{
+	font-size: 16px;
+	color:#D43B33;
+	font-weight: bold;
+}
+#newsguestbook .ngright p
+{
+	
+	clear: both;
+	
+}
+
+#guestform p
+{
+	padding-top: 10px;
+}
+#newsguestbook .ngright input
+{
+	width:230px;
+	height:39px;
+	outline: none;
+	padding-left: 10px;
+}
+
+
+
+#newsguestbook .ngright input.marginrightinput
+{
+	margin-right: 10px;
+}
+#newsguestbook .ngright input.vcode
+{
+	width:90px;
+}
+
+#newsguestbook .ngright input.btnsave
+{
+	width: 130px;
+	height:32px;
+	background-color: #D43B33;
+	color: white;
+	border: 0;
+	float: right;
+}
+#newsguestbook .ngright p.first
+{
+	padding-top: 20px;
+}
+#newsguestbook .ngright p.lastp
+{
+	color: black;
+	font-weight: bold;
+}
+
+
+#newsguestbook .ngright p span
+{
+	color: #D43B33;
+}
+
+textarea
+{
+	width:490px;
+	height: 176px;
+	padding-top: 10px;
+	padding-left: 10px;
+	outline: none;
+}
+
+
+
+/*新闻留言板结束*/
+

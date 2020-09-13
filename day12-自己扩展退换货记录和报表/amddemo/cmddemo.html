@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<div id="box1">
+			ADM规范下模块化开发写法例子。请用谷歌浏览器在控制台下查看输出结果。
+		</div>
+		<script src="js/require.2.3.6.js" data-main="main" defer async="true"></script>
+		<script type="text/javascript">
+			window.onload=function(){
+				require.config({
+				   baseUrl: "js",//统一配置跟目录
+			　　　　paths: {
+			　　　　　　"math": "math",//配置模块的路径,省略掉了js后缀
+						"yuwen":"yuwen"
+			　　　　}
+	　　			});
+			};
+		</script>
+	</body>
+</html>

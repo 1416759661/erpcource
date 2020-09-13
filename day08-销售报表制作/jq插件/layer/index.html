@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="css/lobibox.css"/>
+		<style type="text/css">
+			#table1{
+				width:750px;
+				border-collapse: collapse;
+				font-family: "微软雅黑";
+				font-size:14px;
+			}
+			
+			#table1 th{
+				width: 100px;
+				height: 30px;
+			}
+			#table1 th.address{
+				width: auto;
+			}
+			
+			#table1 td{
+				height: 30px;
+				padding-left:5px;
+			}
+
+		</style>
+	</head>
+	<body>
+		<table border="" cellspacing="0" cellpadding="0" id="table1">
+			<tr>
+				<th class="tditem">姓名</th>
+				<th class="tditem">性别</th>
+				<th class="tditem">年龄</th>
+				<th class="address">地址</th>
+				<th class="tditem">操作</th>
+			</tr>
+			<tr data-id="1">
+				<td>张三</td>
+				<td>男</td>
+				<td>21</td>
+				<td>成都市成汉南路399号</td>
+				<td>
+					<a href="javascript:void(0);" class="edit">修改</a>
+					<a href="javascript:void(0);" class="delete">删除</a>
+				</td>
+			</tr>
+			<tr data-id="2">
+				<td>李四</td>
+				<td>女</td>
+				<td>21</td>
+				<td>成都市成汉南路399号</td>
+				<td>
+					<a href="javascript:void(0);" class="edit">修改</a>
+					<a href="javascript:void(0);" class="delete">删除</a>
+				</td>
+			</tr>
+			<tr data-id="3">
+				<td>张三</td>
+				<td>男</td>
+				<td>21</td>
+				<td>成都市成汉南路399号</td>
+				<td>
+					<a href="javascript:void(0);" class="edit">修改</a>
+					<a href="javascript:void(0);" class="delete">删除</a>
+				</td>
+			</tr>
+			<tr data-id="4">
+				<td>张三</td>
+				<td>男</td>
+				<td>21</td>
+				<td>成都市成汉南路399号</td>
+				<td>
+					<a href="javascript:void(0);" class="edit">修改</a>
+					<a href="javascript:void(0);" class="delete">删除</a>
+				</td>
+			</tr>
+		</table>
+		<input type="button" value="新增" id="btn1" /> 
+		<script src="js/jquery-1.11.0.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/lobibox.min.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+		
+		var html='<form id="useradd"><p>姓名:<input type="text" name="username"/></p>'
+			html+='<p>性别:<input type="radio" name="sex" value="1"/>男<input type="radio" name="sex" value="0"/>女</p>';
+			html+='<p>年龄:<input type="text" name="age"/></p>';
+			html+='<p>地址:<input type="text" name="address"/></p>';
+			html+='</form>';
+		
+		
+			//弹出新增窗口
+			$("#btn1").click(function() {
+				Lobibox.window({
+					title: '新增用户',
+					content:html,
+					height:500,
+					buttons: {
+						 ok: {
+						        'class': 'lobibox-btn',
+						        text: '确定',
+						        closeOnClick: true//点击后关闭
+						    },
+						 cancel: {
+						        'class': 'lobibox-btn lobibox-btn-cancel',
+						        text: '取消',
+						        closeOnClick:true//点击后关闭
+						 }
+					},
+					callback: function($this, type, ev){
+    					if (type === 'ok'){
+	        				var username=$("input[name='username']").val();
+	        				var sex=$("input[name='sex']:checked").val();
+	        				var age=$("input[name='age']").val();
+	        				var address=$("input[name='address']").val();
+	        				//把获取的数据post给后端开发人员
+	        				
+	        				var s="<tr>";
+	        				s+="<td>"+username+"</td>";
+	        				console.log(sex);
+	        				if(sex==0)
+	        				{
+	        					s+="<td>女</td>";
+	        				}
+	        				else
+	        				{
+	        					s+="<td>男</td>";
+	        				}
+	        				s+="<td>"+age+"</td>"
+	        				s+="<td>"+address+"</td>"
+	        				s+="<td>";
+	        				s+="<a href=\"javascript:void(0);\" class=\"edit\">修改</a>"
+	        				s+="<a href=\"javascript:void(0);\" class=\"delete\">删除</a>"
+	        				s+="</td>";
+	        				s+="</tr>";
+	        				//把获取的数据加到页面的表格里
+	        				$("#table1").append(s);
+	        			
+	        				console.log(sex);
+    					}
+					}					
+				});
+			});
+			
+			
+			//修改功能：
+			//功能描述：1、点击修改按钮，打开一个窗口。2、取出当前行的数据，把数据绑定到表单对应的文本框上。3、修改表单的数据，把修改后的数据更新到表格
+			$("#table1").on("click",".edit",function(){
+				var currenttr=$(this).parent().parent();//找到当前的行tr
+				
+				//1、点击修改按钮执行此处的代码，首先弹出一个窗口
+				Lobibox.window({
+					title: '修改用户信息',
+					content:html,
+					height:300,
+					buttons: {
+						 ok: {
+						        'class': 'lobibox-btn',
+						        text: '确定',
+						        closeOnClick: true//点击后关闭
+						    },
+						cancel: {
+						        'class': 'lobibox-btn lobibox-btn-cancel',
+						        text: '取消',
+						        closeOnClick: true//点击后关闭
+						 }
+					},
+					shown:function(){
+						//2、取出当前行的数据
+						var username=currenttr.find("td").eq(0).text();
+						var sex=currenttr.find("td").eq(1).text();
+						var age=currenttr.find("td").eq(2).text();
+						var address=currenttr.find("td").eq(3).text();
+						var id=currenttr.attr("data-id");
+						//把取出来的值绑定到表单对应的input上面
+						$("input[name='username']").val(username);
+						if(sex=="男")
+						{
+							$("input[name='sex']").eq(0).prop("checked",true);
+							//对于单选  复选  下拉 要对这三类元素设置让他选中 或者取消选中  要用 prop来设置 不要用attr
+							//$("input[name='sex']").eq(0).attr("checked",checked)
+						}
+						else
+						{
+							$("input[name='sex']").eq(1).prop("checked",true);
+						}
+						
+						$("input[name='age']").val(age);
+						$("input[name='address']").val(address);
+						
+						console.log(username);
+					},
+					callback: function($this, type, ev){
+						//点击确定按钮，更新表格的数据
+						if (type === 'ok'){
+							//步骤：1、从表单上面取的修改后的值
+							var username=$("input[name='username']").val();
+	        				var sex=$("input[name='sex']:checked").val();
+	        				var age=$("input[name='age']").val();
+	        				var address=$("input[name='address']").val();
+	        				currenttr.find("td").eq(0).text(username);
+	        				if(sex==1)
+	        				{
+	        					currenttr.find("td").eq(1).text("男");
+	        				}
+	        				else
+	        				{
+	        					currenttr.find("td").eq(1).text("女");
+	        				}
+	        				
+	        				currenttr.find("td").eq(2).text(age);
+	        				currenttr.find("td").eq(3).text(address);	
+						}
+					}
+				});
+				
+			});
+			
+			$("#table1").on("click",".delete",function(){
+			var currenttr=$(this).parent().parent();//找到要删除的行tr
+				Lobibox.confirm({
+					title: '系统提示:',
+					msg: "您确定要删除此数据吗?一旦删除，就不能恢复!",
+					width:500,//宽度和高度
+					height:200,//高度
+					closeButton:true,  //显示关闭按钮
+					draggable:true,  //是否允许拖动
+					closeOnEsc: true,   //是否可以用esc按钮关闭      
+					buttons: {
+						    ok: {
+						        'class': 'lobibox-btn lobibox-btn-default',
+						        text: '确定',
+						        closeOnClick: true//点击后要不要关闭
+						    },
+						    cancel: {
+						        'class': 'lobibox-btn lobibox-btn-cancel',
+						        text: '取消',
+						        closeOnClick: true//点击后关闭
+						    }
+					},
+					callback: function($this, type, ev){
+						if (type === 'ok')
+						{
+							currenttr.remove();
+						}
+					}
+					
+				});
+			});
+			
+			
+			
+		</script>
+	</body>
+</html>

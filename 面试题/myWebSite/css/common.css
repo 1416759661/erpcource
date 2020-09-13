@@ -1,0 +1,143 @@
+body,
+			ul,
+			ol,
+			li,
+			dl,
+			dt,
+			dd,
+			p,
+			h1,
+			h2,
+			h3,
+			h4,
+			h5,
+			form,
+			fieldset,
+			input,
+			table,
+			td,
+			img,
+			a,
+			div,
+			span,
+			strong,
+			em {
+				padding: 0;
+				margin: 0;
+			}
+			
+			body {
+				font-family: 微软雅黑;
+				font-size: 12px;
+			}
+			
+			.header,
+			.adv,
+			.mainContent {
+				width: 990px;
+				margin: 0 auto;
+				margin-top:2px;
+				/*border: solid 1px #ccc;*/
+			}
+			
+			body {
+				background-image: url(../images/bghead.jpg);
+				background-repeat: no-repeat;
+			}
+			
+			.header {
+				height: 135px;
+			}
+			
+			.banner {
+				height: 93px;
+			}
+			
+			.banner img {
+				margin-top: 10px;
+			}
+			
+			.nav {
+				position: absolute;
+				height: 40px;
+				width: 990px;
+				/*border: solid 1px red;*/
+				background-image: url(../images/navbg01.png);
+				background-repeat: repeat-x;
+				z-index: 1;
+			}
+			
+			.navullist {
+				list-style: none;
+			}
+			
+			.navullist>li {
+				display: inline-block;
+				/*border: solid 1px red;*/
+				height: 39px;
+				line-height: 39px;
+				width: 105px;
+				text-align: center;
+				font-size: 14px;
+				position: relative;
+			}
+			
+			.navullist li a {
+				text-decoration: none;
+				color: white;
+			}
+			
+			.navullist li:hover {
+				background-color: #FA8406;
+			}
+			
+			.navleft {
+				background-image: url(../images/index02_09.png);
+				background-repeat: no-repeat;
+				/*border:solid 1px red;*/
+				background-position: 0px -1px;
+			}
+			
+			.navright {
+				background-image: url(../images/index02_13.png);
+				background-repeat: no-repeat;
+				/*border:solid 1px red;*/
+				background-position: right -1px;
+			}
+			
+			li.lispace {
+				width: 5px;
+				background-image: url(../images/index02_11.png);
+				background-repeat: no-repeat;
+				background-position: -1px 0px;
+			}
+			
+			.subNav {
+				position: absolute;
+				top: 39px;
+				left: 0;
+				background-color: #0043AC;
+				margin: 0;
+				padding: 0;
+				list-style: none;
+				width: 150px;
+				display: none;
+				padding-top: 2px;
+			}
+			.subNav li:hover {
+				background-color: #666;
+			}		
+			.subNav li {
+				height: 30px;
+				line-height: 30px;
+				border-bottom: solid 1px white;
+				margin: 0;
+				padding: 0;
+				text-align: left;
+				padding-left: 5px;
+			}
+			
+			.subNav li.nobottomborder {
+				border-bottom: 0;
+			}
+			

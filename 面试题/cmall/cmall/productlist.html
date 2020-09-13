@@ -1,0 +1,516 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="css/comm.css"/>
+		<link rel="stylesheet" type="text/css" href="css/slide.css"/>
+		<style type="text/css">
+			/*头部开始*/
+			header{
+				width: 100%;
+				background-color: #333;
+				height:39px;
+			}
+			.inner{
+				width: 1226px;
+				height: 39px;
+				margin: 0 auto;
+				position: relative;
+			}
+			
+			.nav{
+				list-style: none;
+			}
+			
+			.nav li{
+				float: left;
+				padding: 0 8px;
+			}
+			
+			.nav li a{
+				text-decoration: none;
+				line-height: 39px;
+				color: #B0B0B0;
+				font-size: 14px;
+			}
+			
+			#rightwrapper{
+				width: 290px;
+				height: 39px;
+				position: absolute;
+				right: 0;
+				top: 0;
+			}
+			
+			#rightwrapper a{
+				color:#B0B0B0;
+				font-size: 14px;
+				line-height: 39px;
+				text-decoration: none;
+				margin: 0 7px;
+			}
+			#shopingcar{
+				display: block;
+				width: 120px;
+				text-align: center;
+				position: absolute;
+				right:0;
+				top: 0;
+				background-image: url(img/car.png);
+				background-repeat: no-repeat;
+				background-position: 3px 9px;
+				margin-right: 0!important;
+				background-color:#424242;
+			}
+			
+			/*头部结束*/
+			
+			/*logo模块开始*/
+			
+			#logowapper{
+				width:1226px;
+				height: 98px;
+				
+				margin: 0 auto;/*盒子居中*/
+				position: relative;/*表示以此为参照，里面的元素定位都以它为参照物.*/
+			}
+			
+			#logowapper img{
+				margin-top: 22px;
+			}
+			
+			#logonav{
+				width:600px;
+				height:98px;
+			
+				position: absolute;/*定位属性*/
+				left:230px;/*定位坐标*/
+				top:0px;/*定位坐标*/
+				list-style: none;/*干掉ul里面每个li前面的小圆点*/
+			}
+			
+			#logonav li{
+				float: left;
+				padding:0px 10px;
+				line-height:98px;
+			}
+			
+			#logonav li a{
+				color: #333;
+				text-decoration: none;/*把a标签的下划线去掉*/
+			}
+			
+			#search{
+				width: 300px;
+				height: 48px;
+				border: solid 1px #E0E0E0;
+				position: absolute;/*绝对定位*/
+				right: 0;
+				top:24px;
+			
+				
+			}
+			
+			#search input{
+				width: 243px;
+				height:48px;
+				position: absolute;
+				left: 0;
+				top: 0;
+				border: 0;
+				border-right: solid 1px #E0E0E0;
+			}
+			
+			#search img{
+				position: absolute;
+				right:12px;
+				top:-17px;
+				cursor: pointer;/*鼠标移动上去有一个手形*/
+			}
+			
+			
+			/*logo模块结束*/
+			
+			/*轮播开始*/
+			.outerdiv{
+				background-color: #575660;
+				height: 620px;
+			}
+			.ppt{
+				width: 1226px;
+				height: 620px;
+				background-color: green;
+				margin: 0 auto;
+			}
+			/*轮播结束*/
+			
+			
+			/*小米明星单品开始*/
+			.startitle{
+				width: 1226px;
+				height: 84px;
+				margin: 0 auto;
+				line-height:110px;
+				position: relative;
+			}
+			
+			.startitle h3{
+				color: #333;
+				font-weight: lighter; /*设置字体的粗细 lighter表示比之前的字体细一点*/
+				
+			}
+			
+			#btngroup{
+				width: 70px;
+				height: 24px;
+				position: absolute;
+				right: 0;
+				bottom:12px;
+			}
+			
+			#btngroup span{
+				display: block;
+				width:33px;
+				height:22px;
+				border: solid 1px #E0E0E0;
+				float: left;
+				cursor: pointer;
+			}
+			
+			.leftspan{
+				background-image: url(img/jian01.png);
+				background-repeat: no-repeat;
+				background-position: 10px 3px;
+			}
+			
+			.rightspan{
+				background-image: url(img/jian02.png);
+				background-repeat: no-repeat;
+				background-position: 10px 3px;
+			}
+			
+			
+			.prolist{
+				width: 1226px;
+				height: 340px;
+				margin: 0 auto;
+			}
+			
+			.prolist .item
+			{
+				width:234px;
+				height:288px;
+				background-color:#FAFAFA;
+				float: left;
+				margin-left: 14px;
+				border-top: solid 1px #ff6600;
+				padding-top: 52px;
+				text-align: center;
+				font-size: 14px;
+			}
+			
+			.prolist .item p{
+				line-height: 30px;
+			}
+			
+			/*小米明星单品结束*/
+			
+			
+			/*底部开始*/
+			.footer-a{
+				width: 1226px;
+				height: 118px;
+				background-image: url(img/service.png);
+				background-repeat: no-repeat;
+				margin: 0 auto;
+			}
+			
+			.footer-b{
+				width: 1226px;
+				height: 192px;
+			
+				margin: 0 auto;
+				background-image: url(img/rightbg.png);
+				background-repeat: no-repeat;
+				background-position: right -1px;
+			}
+			
+			.helpitem{
+				width: 160px;
+				height: 190px;
+				
+				float: left;
+			}
+			
+			.helpitem h5{
+				color: #424242;
+				font-size: 16px;
+				padding-top: 30px;
+				padding-bottom: 10px;
+			}
+			
+			.helpitem p a{
+				color: #757575;
+				text-decoration: none;
+				font-size: 14px;
+				line-height: 30px;
+			}
+			
+			.footer-c{
+				height: 166px;
+				background-color: #FAFAFA;
+			}
+			
+			.innerfooter{
+				width: 1226px;
+				height: 166px;
+				margin: 0 auto;
+				
+				position: relative;
+			}
+			
+			.footerlogo{
+				margin-top: 30px;
+			}
+			
+			
+			.copyright{
+				width: 750px;
+				height: 72px;
+				
+				position: absolute;
+				left: 60px;
+				top: 25px;
+			}
+			
+			#icon{
+				width: 400px;
+				height: 50px;
+				background-image:url(img/footercright.png);
+				position: absolute;
+				right: 0;
+				top:15px;
+			}
+			
+			.copyright p{
+				font-size: 14px;
+				color: #B0B0B0;
+			}
+			
+			.first{
+				color:#757575;
+				font-size: 14px;
+			}
+			.first a{
+				color: #757575;
+				text-decoration: none;
+			}
+			/*底部结束*/
+			
+		</style>
+	</head>
+	<body>
+		<!--头部开始-->
+		<header>
+			<div class="inner">
+				<ul class="nav">
+					<li><a href="###">首页</a></li>
+					<li><a href="###">米聊</a></li>
+					<li><a href="###">手机</a></li>
+					<li><a href="###">耳机</a></li>
+					<li><a href="###">电瓷</a></li>
+					<li><a href="###">手环</a></li>
+					<li><a href="###">充电宝</a></li>
+					<li><a href="###">笔记本</a></li>
+				</ul>
+				<div id="rightwrapper">
+					<a href="###">登录</a>
+					<a href="###">注册</a>
+					<a href="###">消息通知</a>
+					<a id="shopingcar">购物车(0)</a>
+				</div>
+			</div>
+		</header>
+		<!--头部结束-->
+		<!--logo模块开始-->
+		<div id="logowapper">
+			<img src="img/logo.png"/>
+			<ul id="logonav">
+				<li><a href="###">小米手机</a></li>
+				<li><a href="###">红米</a></li>
+				<li><a href="###">笔记本</a></li>
+				<li><a href="###">电视</a></li>
+				<li><a href="###">电视盒子</a></li>
+				<li><a href="###">智能硬件</a></li>
+				<li><a href="###">路由器</a></li>
+				<li><a href="###">服务</a></li>
+				<li><a href="###">社区</a></li>
+			</ul>
+			<div id="search">
+				<input type="text" id="tbkey"/>
+				<img src="img/search.png"/>
+			</div>
+		</div>
+		<!--logo模块结束-->
+		
+		<!--轮播开始-->
+		<div class="outerdiv">
+			<div class="ppt">
+				<!--轮播开始-->
+					<div class="pptbox" id="ppt01">
+						<ul class="innerwrapper">
+							<li><a href="#"><img src="img/pptinner.png"/></a></li>
+							<li><a href="#"><img src="img/pptinner.png"/></a></li>
+							<li><a href="#"><img src="img/pptinner.png"/></a></li>
+						</ul>
+						<ul class="controls">
+							<li class="current">1</li>
+							<li>2</li>
+							<li>3</li>
+						</ul>			
+						<span class="btnleft"></span>
+						<span class="btnright"></span>
+					</div>					
+				<!--轮播结束-->
+			</div>
+		</div>
+		
+		<!--轮播结束-->	
+		<!--小米明星商品开始-->
+		
+		<div class="startitle">
+			<h3>小米明星单品</h3>    
+			<div id="btngroup">
+				<span class="leftspan"></span><span class="rightspan" style="border-left:0;"></span>
+			</div>
+		</div>
+		
+		<div class="prolist">
+			<div class="item" style="margin-left: 0;">
+				<p><img src="img/pro01.png"/></p>
+				<p>小米max2 </p>
+				<p style="color:#B0B0B0;">大屏大电量 享多重好礼</p>
+				<p style="color:#ff6600;">￥1399.00<span>起</span></p>
+			</div>
+			<div class="item">
+				<p><img src="img/pro01.png"/></p>
+				<p>小米max2 </p>
+				<p style="color:#B0B0B0;">大屏大电量 享多重好礼</p>
+				<p style="color:#ff6600;">￥1399.00<span>起</span></p>
+			</div>
+			<div class="item">
+				<p><img src="img/pro01.png"/></p>
+				<p>小米max2 </p>
+				<p style="color:#B0B0B0;">大屏大电量 享多重好礼</p>
+				<p style="color:#ff6600;">￥1399.00<span>起</span></p>
+			</div>
+			<div class="item">
+				<p><img src="img/pro01.png"/></p>
+				<p>小米max2 </p>
+				<p style="color:#B0B0B0;">大屏大电量 享多重好礼</p>
+				<p style="color:#ff6600;">￥1399.00<span>起</span></p>
+			</div>
+			<div class="item">
+				<p><img src="img/pro01.png"/></p>
+				<p>小米max2 </p>
+				<p style="color:#B0B0B0;">大屏大电量 享多重好礼</p>
+				<p style="color:#ff6600;">￥1399.00<span>起</span></p>
+			</div>
+		</div>
+		
+		
+		<!--小米明星商品结束-->
+		
+		<!--底部开始	-->
+		<div class="footer-a">
+			
+		</div>
+		<div class="footer-b">
+			<div class="helpitem">
+				<h5>帮助中心</h5>
+				<p><a href="###">账户管理</a></p>
+				<p><a href="###">购物指南</a></p>
+				<p><a href="###">订单操作</a></p>
+			</div>
+			<div class="helpitem">
+				<h5>帮助中心</h5>
+				<p><a href="###">账户管理</a></p>
+				<p><a href="###">购物指南</a></p>
+				<p><a href="###">订单操作</a></p>
+			</div>
+			<div class="helpitem">
+				<h5>帮助中心</h5>
+				<p><a href="###">账户管理</a></p>
+				<p><a href="###">购物指南</a></p>
+				<p><a href="###">订单操作</a></p>
+			</div>
+			<div class="helpitem">
+				<h5>帮助中心</h5>
+				<p><a href="###">账户管理</a></p>
+				<p><a href="###">购物指南</a></p>
+				<p><a href="###">订单操作</a></p>
+			</div>
+			<div class="helpitem">
+				<h5>帮助中心</h5>
+				<p><a href="###">账户管理</a></p>
+				<p><a href="###">购物指南</a></p>
+				<p><a href="###">订单操作</a></p>
+			</div>
+			<div class="helpitem">
+				<h5>帮助中心</h5>
+				<p><a href="###">账户管理</a></p>
+				<p><a href="###">购物指南</a></p>
+				<p><a href="###">订单操作</a></p>
+			</div>
+		</div>
+		<div class="footer-c">
+			<div class="innerfooter">
+				<img src="img/logo.png" class="footerlogo"/>
+				<div class="copyright">
+					<p class="first">
+						<a href="###">小米商城</a> |
+						<a href="###">miui</a> |
+						<a href="###">米聊</a> |
+						<a href="###">游戏</a> |
+						<a href="###">多看阅读</a> |
+						<a href="###">小城</a> |
+						<a href="###">游戏</a> |
+						<a href="###">小米商城</a> |
+						<a href="###">游戏</a> |
+						<a href="###">小米</a> 
+					</p>
+					<p> ICP备案号 数 蜀 ICB 55234441212 京公安备案 ：sssss223222</p>
+					<p>违法和不良信息举报电话：12315 </p>
+
+				</div>
+				<div id="icon">
+					
+				</div>
+			</div>
+		</div>
+		
+		
+		<!--底部结束-->
+		
+		
+		
+		<script src="js/jquery-1.11.0.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/tyslide.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			$("#ppt01").tyslide({
+				boxh:620,//盒子的高度
+				w:1226,//盒子的宽度
+				h:620,//图片的高度
+				isShow:true,//是否显示控制器
+				isShowBtn:true,//是否显示左右按钮
+				controltop:5,//控制按钮上下偏移的位置,要将按钮向下移动   首先保证boxh 高度>图片 h
+				controlsW:20,//控制按钮宽度
+				controlsH:20,//控制按钮高度
+				radius:10,//控制按钮圆角度数
+				controlsColor:"#31534C",//普通控制按钮的颜色
+				controlsCurrentColor:"#7AC1B1"//当前控制按钮的颜色
+			});
+		</script>
+	</body>
+</html>

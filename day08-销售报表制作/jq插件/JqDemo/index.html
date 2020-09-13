@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="css/jquery.slideBox.css"/>	
+		<style type="text/css">
+			.items img{ height: 400px;}
+		</style>
+	</head>
+	<body>
+ 	<div id="demo1" class="slideBox">
+  <ul class="items">
+    <li><a href="http://www.jq22.com/" title="这里是测试标题一"><img src="img/1.jpg"></a></li>
+
+    <li><a href="http://www.jq22.com/" title="这里是测试标题二"><img src="img/2.jpg"></a></li>
+
+    <li><a href="http://www.jq22.com/" title="这里是测试标题三"><img src="img/3.jpg"></a></li>
+
+    <li><a href="http://www.jq22.com/" title="这里是测试标题四"><img src="img/4.jpg"></a></li>
+
+    <li><a href="http://www.jq22.com/" title="这里是测试标题五"><img src="img/5.jpg"></a></li>
+  </ul>
+</div>
+ 
+	<script src="js/jquery-1.11.0.js" type="text/javascript" charset="utf-8"></script>	
+	<script src="js/jquery.slideBox.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript">
+		$('#demo1').slideBox({
+			hideBottomBar :false,//是否隐藏下边的标题和控制按钮
+			delay:1, //自动滚动间隔时间，单位：秒
+			width:550,//宽度
+			height:400,//高度
+			clickBarRadius:20,//圆角半径
+			easing: 'linear', //swing,linear//滚动特效
+			hideClickBar: false, //不自动隐藏点选按键
+			direction : 'top',//left,top
+			duration:1, //滚动持续时间，单位：秒
+			startIndex :1//默认从第3张开始轮播
+		});
+	</script>
+	<!--
+		插件的使用步骤：
+		第一步：引入jq库
+		第二步：引入插件样式和插件js库
+		第三步：按照插件的demo写html结构
+		第四步：调用插件的方法
+		第五步：修改插件参数，测试插件效果
+		
+	-->
+	</body>
+</html>

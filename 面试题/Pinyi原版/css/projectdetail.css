@@ -1,0 +1,42 @@
+#maincontent .titlecontainer
+{
+	height: 214px;
+	border-bottom: solid 1px #F3E3C9;
+}
+
+#maincontent .titlecontainer p.path
+{
+	padding-top: 50px;
+}
+
+#maincontent .titlecontainer p.sourceinfo
+{
+	padding-top: 18px;
+	text-align: center;
+	color: #666;
+}
+
+#maincontent .titlecontainer h1
+{
+	padding-top: 56px;
+	text-align: center;
+	font-size: 24px;
+	color: #D64F49;
+}
+
+.projectcontent
+{
+	line-height: 24px;
+	padding:20px 10px;
+}
+
+.pager
+{
+	color: #B8200D;
+	padding: 20px 0;
+}
+
+.pager a
+{
+	color: #B8200D;margin-right: 20px;
+}

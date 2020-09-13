@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			/*#div1{
+				width: 800px;
+				height: 800px;
+				border: solid 1px red;
+				position:absolute;
+			}
+			
+			#div2{
+				width: 600px;
+				height: 600px;
+				border: solid 1px green;
+			}
+			
+			#div3{
+				width: 500px;
+				height: 500px;
+				border: solid 1px blue;
+				position: absolute;
+			}
+			
+			#div4{
+				width: 50px;
+				height: 50px;
+				border: solid 1px yellowgreen;
+				position: absolute;
+				right: 10px;
+				top: 20px;
+			}*/
+			
+			#divbox1{
+				width: 500px;
+				height: 600px;
+				border: solid 1px blue;
+			}
+			#divbox2{
+				background-color:#D43B33;
+				width: 90px;
+				height: 90px;
+				position: relative;
+				left:50px;
+				top:50px;
+			}
+		</style>
+	</head>
+	<body>
+		
+		<!--<div id="div1">
+			<div id="div2">
+				<div id="div3">
+					<div id="div4">
+						
+					</div>
+				</div>				
+			</div>
+		</div>-->
+		
+		<!--
+			相对定位两个用处：1、作为绝对定位的参考，子绝父相  2、 微调自身的位置
+			绝对定位：从父亲开始查找，直到找到一个具有position的节点为止，以此节点为参考点，对自身进行定位
+			浮动：主要就是用来把很多盒子显示在一行，向右浮动会改变浮动元素的顺序。浮动后，浮动元素之间的距离可以用一个和浮动方向相反的margin来撑开。
+		-->
+		
+		<div id="divbox1">
+			<div id="divbox2">
+				
+			</div>
+		</div>
+		
+	</body>
+</html>

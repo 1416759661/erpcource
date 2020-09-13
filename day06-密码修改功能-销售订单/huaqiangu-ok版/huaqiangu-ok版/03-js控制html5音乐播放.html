@@ -1,0 +1,35 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title></title>
+	</head>
+	<body>
+		<audio src="huaqian.mp3" controls="controls" preload id="music1" hidden>
+		</audio>
+		<input type="button" onclick="bf();" value="播放/暂停" />
+		<input type="button" onclick="rbf();" value="重新播放">
+		<script>
+			function rbf() {
+				var audio = document.getElementById('music1');
+				audio.currentTime = 0;
+				audio.play();
+			}
+
+			function bf() {
+				var audio = document.getElementById('music1');
+				if(audio !== null) {
+					//检测播放是否已暂停.audio.paused 在播放器播放时返回false.
+					console.log(audio.paused);
+					if(audio.paused) {
+						audio.play(); //audio.play();// 这个就是播放  
+					} else {
+						audio.pause(); // 这个就是暂停
+					}
+				}
+			}
+		</script>
+	</body>
+
+</html>

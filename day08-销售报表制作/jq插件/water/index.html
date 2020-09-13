@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+	</head>
+	<body>
+		<canvas id="dowebok">
+		</canvas>
+		<script src="js/jquery-1.11.0.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/waterbubble.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			
+			var i=0;
+			var timer1=setInterval(function(){
+				i++;
+				if(i==100)
+				{
+					clearInterval(timer1);
+				}
+				var s=parseFloat(i)/parseFloat(100);
+				$('#dowebok').waterbubble({
+					 radius: 200,//设置水球的大小
+					 lineWidth:2,//边框宽度
+					 data:s,//数据多少
+					 txt:(i.toString()+'%'),//显示文本
+					 textColor: 'rgba(105, 20, 30, 0.8)',//文本颜色
+					 font: 'lighter 60px arial',//字体样式
+					 wave:true,//是否显示波纹
+					 waterColor: 'rgba(155, 0, 255, 1)',//水球颜色
+					 animation:false//是否显示动画				 
+				});				
+			},100);
+			
+		</script>
+	</body>
+</html>

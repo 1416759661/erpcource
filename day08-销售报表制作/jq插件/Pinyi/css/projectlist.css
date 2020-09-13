@@ -1,0 +1,203 @@
+/*标题开始*/
+
+#maincontent .title
+{
+	text-align: center;
+}
+
+#maincontent .title p.entitle
+{
+	font-size: 16px;
+	color: #000;
+	padding-top: 52px;
+}
+
+#maincontent .title p.zhtitle
+{
+	font-size: 18px;
+	color: #000;
+	font-weight: bold;
+}
+
+/*标题结束*/
+
+#maincontent .content
+{
+	padding-top: 50px;
+}
+
+#maincontent ul.tap
+{
+	width:1000px;
+}
+/*#maincontent ul.tap li 表示id为maincontent节点下面的携带了tap样式的ul 下面的li  注意ul 和.tap之间不能有空格*/
+#maincontent ul.tap li  
+{
+	width: 333px;
+	float: left;
+	height:35px;
+	text-align: center;
+	background-color: #FAFAFA;
+	line-height: 35px;
+	font-size: 16px;
+}
+
+#maincontent ul.tap li.current  /*对当前的li定义一个特殊的样式  li.current  li后面打上点，再携带一个样式 这样优先级就比前面普通的li的优先级高，所以后面可以重写前面的定义的样式*/
+{
+	height:42px;
+	width: 334px;
+	background-image:url(../images/tapbg.png);
+	background-repeat:no-repeat;	
+}
+
+.cb2 {zoom:1;}    /*==for IE6/7 Maxthon2==*/
+.cb2:after {
+      clear:both;
+      content:'.';
+      display:block;
+      width: 0;
+      height: 0;
+      visibility:hidden;
+}   /*==for FF/chrome/opera/IE8==*/
+
+.contentlist ul
+{
+	float: left;
+	width:720px;
+	margin-right:30px;
+}
+
+.contentlist ul li
+{
+	height:154px;
+	width:690px;
+	padding-left:30px;
+	padding-top: 26px;
+	border: solid 1px #D6D6D6;
+	margin-top: 20px;
+}
+
+.contentlist ul li img
+{
+	float: left;
+	margin-right: 38px;
+}
+.contentlist ul li div.message
+{
+	float: left;
+	width: 448px;
+}
+
+.contentlist p
+{
+	color: #666;
+	line-height: 20px;
+}
+
+.contentlist p.title1
+{
+	font-size:16px;
+	text-align: left;
+	color: #666;
+	font-weight: bold;
+	padding-bottom:16px;
+}
+
+.contentlist p.lastp
+{
+	padding-top:10px;
+	position:relative;
+	color: #7F7F7F;
+	zoom:1;/*兼容ie6加的样式*/
+}
+.contentlist p.lastp a
+{
+	position: absolute;
+	right:0;
+	bottom:0;
+	color: #7F7F7F;
+}
+
+.contentlist p.lastp span
+{
+	margin-left:60px;
+	padding-left:25px;
+	background-image: url(../images/eye.png);
+	background-repeat: no-repeat;
+	background-position:0 3px;
+	/*
+	 * 1、图片作为背景，位置是可以调整的。
+	   2、通过background-position调试图片背景的位置
+	  第一个参数是调整x轴（水平方向）方向的位置
+	  第二一个参数是调整y轴（竖直）方向的位置
+	  3、参数可以为负数，表示朝相反的方向移动
+	 * */
+	
+}
+
+
+/*推荐项目开始*/
+.contentlist .recomright
+{
+	float:left;
+	width:248px;
+	_width:244px;/*为了兼容ie6加的样式*/
+	border: solid 1px #d6d6d6 ;
+	margin-top: 20px;
+	background-image: url(../images/recombg.png);
+	background-repeat: no-repeat;
+	background-position:20px 15px;	
+	padding-top: 80px;
+	padding-bottom: 20px;
+}
+
+.contentlist .recomright p
+{
+	line-height: 24px;
+	padding-left:20px;
+}
+
+.contentlist .recomright p a
+{
+	color: #666;
+}
+/*推荐项目结束*/
+
+/*分页开始*/
+.pager
+{
+	padding-top: 30px;
+	padding-bottom:60px;
+}
+.pager a
+{
+	background-color: #D8D8D8;
+	display: block;
+	width: 36px;
+	height: 36px;
+	text-align: center;
+	color:#fff;
+	float: left;
+	line-height: 36px;
+	margin-right: 2px;
+}
+
+.pager a.currentpage
+{
+	background-color: #B50900;
+}
+
+.pager a.first
+{
+	border-top-left-radius: 5px;
+	border-bottom-left-radius: 5px;
+}
+.pager a.last
+{
+	border-top-right-radius: 5px;
+	border-bottom-right-radius: 5px;
+}
+
+/*分页结束*/
+
+

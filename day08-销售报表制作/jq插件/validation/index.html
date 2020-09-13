@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			table {
+				border-collapse: collapse;
+				width: 800px;
+			}
+			
+			table th {
+				width: 100px;
+				border: solid 1px #ccc;
+				height: 26px;
+				line-height: 26px;
+				text-align: center;
+			}
+			
+			table td {
+				width: 100px;
+				border: solid 1px #ccc;
+				height: 26px;
+				line-height: 26px;
+				text-align: left;
+			}
+			
+			table td.left {
+				text-align: right;
+			}
+			
+			.address {
+				width: 500px;
+			}
+			
+			span.msg {
+				color: red;
+			}
+		</style>
+
+	</head>
+
+	<body>
+		<!--
+			1、制作一个表单，给表单取一个id
+			2、引入jquery库
+			3、引入验证控件jquery.validate.js
+			4、当验证的条件不满足的时候，提示默认是英文的，要有默认的中文提示，就引入多语言包js/messages_cn.js
+			5、写验证规则：给表单的元素取一个name，js验证代码里面增加对应name的验证规则，具体规则参考插件的文档 插件的文档一般来至官网、或者官网的demo\如果这些都没有、可以百度下 找相关文章，比较出名的插件网友一般都有总结
+			6、写验证没有通过的提示 	
+			7、当插件中内置的这些验证都不能满足我们的时候，我们可以自定义验证方法
+			
+			验证此表单要求：
+		-->
+
+		<form action="###" method="post" id="signupForm">
+			<table>
+				<tr>
+					<td class="left">姓名</td>
+					<td class="right"><input type="text" name="username" /><span class="msg">*</span></td>
+				</tr>
+				<tr>
+					<td class="left">班级</td>
+					<td class="right"><input type="text" name="classname" /></td>
+				</tr>
+				
+				<tr>
+					<td class="left">密码</td>
+					<td class="right"><input type="password" id="password1" name="password1" /></td>
+				</tr>
+				
+				<tr>
+					<td class="left">确认密码</td>
+					<td class="right"><input type="password" name="password2" /></td>
+				</tr>
+				
+				
+				<tr>
+					<td class="left">电子邮箱</td>
+					<td class="right"><input type="text" name="email" /></td>
+				</tr>
+				<tr>
+					<td class="left">个人主页</td>
+					<td class="right"><input type="text" name="urladdress" /><span class="msg">*</span></td>
+				</tr>
+				<tr>
+					<td class="left">出生日期</td>
+					<td class="right"><input type="text" name="birthday" /><span class="msg">*</span></td>
+				</tr>
+				<tr>
+					<td class="left">性别</td>
+					<td class="right"><input type="radio" name="sex" />男<input type="radio" name="sex" />女  <label></label></td>
+				</tr>
+				<tr>
+					<td class="left">年龄</td>
+					<td class="right"><input type="text" name="age" /><span class="msg">*</span></td>
+				</tr>
+				<tr>
+					<td class="left">爱好</td>
+					<td class="right"><input type="checkbox" name="hobby" />乒乓球<input type="checkbox" name="hobby" />羽毛球<input type="checkbox" name="hobby" />篮球<input type="checkbox" name="hobby" />足球 <label></label></td>
+				</tr>
+				<tr>
+					<td class="left">电话号码</td>
+					<td class="right"><input type="text" name="tel" /><span class="msg">*</span></td>
+				</tr>
+				<tr>
+					<td class="left">所在位置</td>
+					<td class="right">
+						<select name="address1">
+					<option value="">全部</option>
+					<option value="1">四川省</option>
+					<option value="2">北京市</option>					
+					<option value="3">云南省</option>
+					<option value="4">贵州省</option>
+				</select>
+						<select name="address2">
+					<option value="">全部</option>
+					<option value="1">成都</option>
+					<option value="2">绵阳</option>
+					<option value="3">乐山</option>
+					<option value="4">宜宾</option>
+				</select>
+						<select name="address3">
+					<option value="">全部</option>
+					<option value="1">武侯区</option>
+					<option value="2">高新区</option>
+					<option value="3">锦江区</option>
+					<option value="4">双流县</option>
+				</select>
+					</td>
+				</tr>
+				<tr>
+					<td class="left">头像上传</td>
+					<td class="right"><input type="file" name="headpic" /><span class="msg">*</span></td>
+				</tr>
+				<tr>
+					<td class="left">个人简介</td>
+					<td class="right"><textarea name="deascription" rows="5" cols="90"></textarea><span class="msg">*</span></td>
+				</tr>
+			</table>
+			<input type="submit" value="提交" /><input type="reset" value="重置" />
+		</form>
+
+		<script src="js/jquery-1.11.0.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/jquery.validate.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/messages_cn.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			$(function() {
+				$("#signupForm").validate({
+					rules: {
+						username: {
+							required: true	,
+							ismrtang:true,
+							remote:"http://127.0.0.1:8080/"   
+						}
+						,
+						classname:{
+							required: true	
+						},
+						email:{
+							required: true,
+							email:true
+						},
+						urladdress:{
+							required: true,
+							url:true
+						},
+						birthday:{
+							date:true
+						},
+						sex:{
+							required: true
+						},
+						hobby:{
+							required: true,
+							minlength:2
+						},
+						age:{
+							required: true,
+							number:true,
+							digits:true
+						},
+						password1:{
+							required: true,
+							minlength:6   							
+						}
+						,
+						password2:{
+							equalTo:"#password1" 
+						}
+						,
+						tel:{
+							required: true,
+							digits:true,
+							rangelength:[7,11]  
+						}
+						
+					},
+					messages: {
+						username:{
+							required:"必须填写姓名",
+							remote:"您的用户名被占用"
+						},	
+						classname:{
+							
+						},
+						email:{
+							required:"必须填写邮箱",
+							email:"您填写的邮箱格式不正确"
+						}
+					},
+					errorElement: "span",//错误信息用哪个html节点来包裹
+					errorPlacement: function(error, element) {
+						/*
+						 1、error代表的是错误提示节点 span
+						 2、element代表当前被验证的控件
+						 */
+					
+						//根据被验证控件的类型，将错误信息提示到不同的地方
+						if(element.prop("type") === "checkbox" || element.prop("type") === "radio") {
+							error.insertAfter(element.parent().find("label"));//如果是单选或者如果是复选，就插入到指定的lable里面
+						} else {
+							error.insertAfter(element);
+						}
+					}
+					
+				});
+			});
+			
+			
+			//需求：必须输入mrtang从才能注册
+			//value为被验证控件的值，被验证的控件
+			jQuery.validator.addMethod("ismrtang", function(value, element) {    
+				    return value=="mrtang";
+			}, "您输入的不是mrtang");
+			
+		</script>
+	</body>
+
+</html>

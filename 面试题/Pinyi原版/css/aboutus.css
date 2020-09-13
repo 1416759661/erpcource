@@ -1,0 +1,151 @@
+#aboutus{
+	height: 416px;
+}
+.aboutustitle{
+	height: 94px;
+	border-bottom: solid 1px #CBCBCB;
+}
+.aboutustitle div
+{
+	width: 180px;
+	height: 54px;
+	background-color: white;
+	margin: 0 auto;
+	text-align: center;
+	position: relative;
+	top:60px
+}
+.aboutustitle .entitle
+{
+	font-size: 16px;
+}
+
+.aboutustitle .zhtitle
+{
+	font-size: 18px;
+	font-weight: bold;
+	color: #D43B54;
+}
+.aboutuscontent
+{
+	padding-top: 44px;
+	line-height: 26px;
+	text-align: center;
+}
+
+/*企业文化开始*/
+
+#culture{
+	height: 462px;
+	background-image: url(../images/index_02.png);
+}
+
+#culture .description{
+	float: left;
+	width:378px ;
+	height: 308px;
+	margin-right: 48px;
+}
+
+#culture .innerbox
+{
+	padding-top: 68px;
+}
+
+#culture img
+{
+	float: left;
+}
+
+#culture .description p.entitle{
+	font-size: 16px;
+	color:#000;
+}
+#culture .description p.zhtitle{
+	font-size: 18px;
+	color: #D43B33;
+	font-weight: bold;
+	
+}
+#culture p.p1{
+	font-weight: bold;
+	padding-top: 12px;
+}
+
+#culture p.p2
+{
+	border-bottom: solid 1px #BEBEBE;
+	padding-top: 12px;
+	padding-bottom:7px;
+	
+}
+
+/*企业文化结束*/
+
+/*大事记开始*/
+
+#bigevent p.entitle{
+	font-size: 16px;
+	text-align: center;
+	padding-top: 52px;
+}
+
+#bigevent p.zhtitle{
+	font-size: 18px;
+	font-weight: bold;
+	text-align: center;
+}
+
+#bigevent p.message{
+	text-align: center;
+	padding-top: 50px;
+}
+
+
+#bigevent ul
+{
+	padding-top: 32px;
+	
+}
+
+#bigevent ul li
+{
+	float: left;
+	width: 250px;
+	height: 174px;
+	background-color: #4B4B4B;
+	
+}
+
+#bigevent ul li img
+{
+	display: block;/*消除3像素距离*/
+}
+
+#bigevent ul li p
+{
+	color: white;
+	padding: 0 10px;
+	padding-top: 20px;
+}
+
+#bigevent ul li p.title
+{
+	padding-top: 54px;
+	line-height: 24px;
+	
+}
+
+.continue{
+	height: 52px;
+	line-height: 52px;
+	background-color: #D43B33;
+	color:#fff;
+	text-align: center;
+	font-size: 16px;
+	margin-bottom: 120px;
+}
+
+
+/*大事记结束*/
+

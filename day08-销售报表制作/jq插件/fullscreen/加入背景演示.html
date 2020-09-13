@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="css/jquery.fullPage.css"/>
+		<style type="text/css">
+			.section1 { background: url(img/1.jpg) 50%;}
+			.section2 { background: url(img/2.jpg) 50%;}
+			.section3 { background: url(img/3.jpg) 50%;}
+			.section4 { background: url(img/4.jpg) 50%;}
+		</style>
+	</head>
+	<body>
+		<div id="dowebok">
+			<div class="section section1"></div>
+			<div class="section section2"></div>
+			<div class="section section3"></div>
+			<div class="section section4"></div>
+		</div>
+		<script src="js/jquery-1.11.0.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/jquery.fullPage.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			$(function() {
+				$('#dowebok').fullpage();
+			});
+		</script>
+	</body>
+</html>

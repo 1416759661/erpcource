@@ -1,0 +1,57 @@
+/*标题开始*/
+
+#maincontent .title
+{
+	text-align: center;
+	height: 150px;
+	border-bottom: solid 1px #E6E6E6;
+	width: 1000px;
+	margin: 0 auto;
+}
+
+#maincontent .title p.entitle
+{
+	font-size: 16px;
+	color: #000;
+	padding-top: 52px;
+}
+
+#maincontent .title p.zhtitle
+{
+	font-size: 18px;
+	color: #000;
+	font-weight: bold;
+}
+
+#maincontent .title h1
+{
+	font-size: 22px;
+	color: #D43B33;
+	padding: 20px 0;
+}
+
+/*标题结束*/
+
+#maincontent .content
+{
+	width: 1000px;
+	margin: 0 auto;
+	padding-top: 48px;
+}
+
+#maincontent .content dl
+{
+	width: 333px;
+	height: 236px;
+	float: left;
+	text-align: center;
+}
+
+#maincontent .content dl p
+{
+	line-height:24px;
+}
+
+.map{
+	text-align: center;
+}

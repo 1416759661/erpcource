@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<style type="text/css">
+			#box1{
+				width:150px;
+				height: 500px;
+				background-color: green;
+				display: none;
+			}
+		</style>
+	</head>
+	<body>
+		<input type="button" name="btnopt" id="btnopt" value="点击执行动画" />
+		<div id="box1">
+			
+		</div>
+		<script src="js/jquery-1.11.0.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/jquery.easing.min.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			$("#btnopt").click(function(){
+				$("#box1").slideToggle(800,"easeOutBounce");
+			});
+		</script>
+	</body>
+</html>

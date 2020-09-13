@@ -1,0 +1,147 @@
+#maincontent .expertteam
+{
+	width: 1000px;
+	margin: 0 auto;
+}
+
+#maincontent  p.entitle
+{
+	font-size: 16px;
+	text-align: center;
+	padding-top: 52px;
+}
+
+#maincontent  p.zhtitle
+{
+	font-size: 18px;
+	font-weight: bold;
+	text-align: center;
+	padding-bottom: 30px;
+}
+
+#maincontent .expertteam ul li
+{
+	height: 220px;
+	background-color: #FAFAFA;
+	margin-top: 20px;
+}
+
+#maincontent .expertteam ul li img
+{
+	float: left;
+	margin-right:26px;
+}
+
+#maincontent .expertteam ul li dl
+{
+	float: left;
+	width: 648px;
+	height: 220px;
+	
+}
+#maincontent .expertteam ul li dl dt
+{
+	padding-top: 20px;
+	padding-bottom: 10px;
+}
+#maincontent .expertteam ul li dl dt span
+{
+	border-bottom: solid 2px #D43B33;
+	padding-bottom:6px;
+}
+#maincontent .expertteam ul li dl dt a
+{
+	
+	font-size: 14px;
+	color: #010101;
+}
+
+#maincontent .expertteam ul li dl dd
+{
+	color:#696C6E ;
+	line-height: 24px;
+}
+
+/*专家风采开始*/
+.expertstyle{
+	height: 522px;
+	background-color: #F7F7F7;
+}
+
+.expertstyle ul
+{
+	height: 250px;
+	width: 1246px;
+	margin: 0 auto;
+}
+
+.expertstyle ul li
+{
+	float: left;
+	width: 300px;
+	margin-right: 15px;
+	text-align: center;
+}
+
+.expertstyle ul li a
+{
+	display: block;
+	text-align: center;
+}
+.expertstyle ul li span
+{
+	display: block;
+	padding-top: 20px;
+}
+.expertstyle ul li a.text
+{
+	display: inline;
+	border-bottom: solid 2px #D43B33;
+	padding: 10px 0;
+}
+.expertstyle ul li.lastli
+{
+	margin-right: 0;
+}
+/*专家风采结束*/
+
+/*分页开始*/
+
+.pager
+{
+	width:606px;
+	margin: 0 auto;
+}
+
+.pager a
+{
+	display: block;
+	width: 285px;
+	height: 34px;
+	background-color: #E5E5E5;
+	color: white;
+	float: left;
+	line-height: 34px;
+	font-size: 18px;
+}
+
+.pager a:hover
+{
+	background-color: #D43B33;
+}
+
+.pager a.lefta
+{
+	margin-right: 15px;
+	text-align: right;
+	padding-right: 10px;
+}
+
+.pager a.righta
+{
+	padding-left: 10px;
+}
+
+/*分页结束*/
+
+

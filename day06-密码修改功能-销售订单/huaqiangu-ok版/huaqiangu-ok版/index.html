@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>花千骨官方网站</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link href="css/bootstrap.css" rel="stylesheet" media="screen">
+		<link rel="stylesheet" type="text/css" href="css/bootstrap-theme.css" />
+		<style type="text/css">
+			
+			@keyframes xuanzhuan{
+				from{transform: rotate(0deg);}
+				to{transform: rotate(360deg);}
+			}
+			
+			#navbar-self{
+				margin-bottom: 0;
+			}
+			#a1{
+				background-image: -webkit-linear-gradient(top, #DEF1D7 0%, #DEF1D7 100%);
+				/*min-height: 200px;*/
+				border-color:#DEF1D7;
+			}
+			
+			#a2{
+				background-image: -webkit-linear-gradient(top, #FAF9E3 0%, #FAF9E3 100%);
+				/*min-height: 200px;*/
+				border-color:#FAF9E3;
+			}
+			
+			#a3{
+				background-image: -webkit-linear-gradient(top, #F0DDDD 0%, #F0DDDD 100%);
+				/*min-height: 200px;*/
+				border-color:#F0DDDD;
+			}
+			
+			#a4{
+				background-image: -webkit-linear-gradient(top, #DAECF6 0%, #DAECF6 100%);
+				/*min-height: 200px;*/
+				border-color:#DAECF6;
+			}
+			
+			.img-a1{
+				max-height:400px;
+			}
+			
+			.musiczhuan
+			{
+				background-color: #FAF9E3;
+				padding-left: 28px;
+				padding-top: 28px;
+				padding-bottom: 28px;
+			}
+			
+			.musiczhuan img{
+				width:200px;
+				height:200px;
+				border-radius:100px;
+				animation: xuanzhuan 3s;
+				animation-iteration-count: infinite;
+				animation-timing-function: linear;
+				animation-play-state: paused;
+			}
+			
+			.btnmusic{
+				cursor: pointer;
+			}
+		</style>
+	</head>
+
+	<body>
+		<script src="js/jquery-1.11.0.js"></script>
+		<script src="js/bootstrap.min.js"></script>
+		<!--导航开始-->
+		<nav class="navbar navbar-default" id="navbar-self">
+			<div class="container">
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+			        <span class="sr-only">Toggle navigation</span>
+			        <span class="icon-bar"></span>
+			        <span class="icon-bar"></span>
+			        <span class="icon-bar"></span>
+      				</button>
+					<a class="navbar-brand" href="#">花千骨</a>
+				</div>
+				<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+					<ul class="nav navbar-nav">
+						<li class="active">
+							<a href="#">简介 <span class="sr-only">(current)</span></a>
+						</li>
+						<li>
+							<a href="#">人物</a>
+						</li>
+						<li>
+							<a href="#">音乐</a>
+						</li>
+					</ul>
+					<ul class="nav navbar-nav navbar-right">
+						<li>
+							<a href="#">登录</a>
+						</li>
+						<li>
+							<a href="#">注册</a>
+						</li>
+					</ul>
+				</div>
+				<!-- /.navbar-collapse -->
+			</div>
+			<!-- /.container-fluid -->
+		</nav>
+		<!--导航结束-->
+		<!--轮播开始-->
+		<div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+			  <!-- Indicators -->
+			  <ol class="carousel-indicators">
+			    <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+			    <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+			    <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+			  </ol>
+			
+			  <!-- Wrapper for slides -->
+			  <div class="carousel-inner" role="listbox">
+			    <div class="item active">
+			      <img src="img/lb1.jpg" alt="">
+			      <div class="carousel-caption">
+			       		<h4>花千骨，出生时命格诡异、坚强善良的孤女</h4>
+						<p>花千骨，出生时命格诡异、坚强善良的孤女，被长留上仙白子画下凡化身墨冰仙所救，对他暗生情愫；白子画，身负重任一心想保护天下苍生的长留掌门，明知花千骨是自己生死劫，非但不忍杀生反救花千骨一命。</p>
+			      </div>
+			    </div>
+			    <div class="item">
+			      <img src="img/lb2.jpg" alt="">
+			      <div class="carousel-caption">
+			       		<h4>花千骨，出生时命格诡异、坚强善良的孤女</h4>
+						<p>花千骨，出生时命格诡异、坚强善良的孤女，被长留上仙白子画下凡化身墨冰仙所救，对他暗生情愫；白子画，身负重任一心想保护天下苍生的长留掌门，明知花千骨是自己生死劫，非但不忍杀生反救花千骨一命。</p>
+			      </div>
+			    </div>
+			    <div class="item">
+			      <img src="img/lb3.jpg" alt="">
+			      <div class="carousel-caption">
+			       		<h4>花千骨，出生时命格诡异、坚强善良的孤女</h4>
+						<p>花千骨，出生时命格诡异、坚强善良的孤女，被长留上仙白子画下凡化身墨冰仙所救，对他暗生情愫；白子画，身负重任一心想保护天下苍生的长留掌门，明知花千骨是自己生死劫，非但不忍杀生反救花千骨一命。</p>
+			      </div>
+			    </div>
+  			</div>
+
+		  <!-- Controls -->
+		  <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+		    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+		    <span class="sr-only">Previous</span>
+		  </a>
+		  <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+		    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+		    <span class="sr-only">Next</span>
+		  </a>
+		</div>
+		<!--轮播结束-->
+
+		<!--故事概要开始-->
+		
+		<div class="container page-header">
+			<div class="">
+				<h2 class="navbar-text">故事概要 <small>改编自fresh果同名小说</small></h2>
+			</div>	
+			
+		</div>
+		<div class="container well">
+			<p>花千骨，出生时命格诡异、坚强善良的孤女，被长留上仙白子画下凡化身墨冰仙所救，对他暗生情愫；白子画，身负重任一心想保护天下苍生的长留掌门，明知花千骨是自己生死劫，非但不忍杀生反救花千骨一命。
+
+为寻恩人，花千骨前往长留仙山。</p>
+			<p>在白子画暗暗帮助下，花千骨几经波折经过重重考验拜为其座下唯一的弟子。师徒二人亦师亦友，皆以匡扶正义保护上古十大神器为己任。二人游历人间，救助孤寡，锄强扶弱。朝夕相对，让花千骨对白子画产生了深深的爱慕执念。而深爱白子画的堕仙夏紫薰为异朽阁主设计，为破白子画的劫数，投毒加害花千骨，白子画为救花千骨身中剧毒。花千骨不惜偷盗神器为师父解毒，不料阴差阳错之下放出妖神，并于无意中得到洪荒之力。自此，六界动乱不堪，百姓民不聊生。白子画既要匡顾天下，又要保护花千骨，费尽心力，身受重伤。
+
+花千骨定妆 花千骨定妆 (28张)</p> 
+			<p>糖宝等人意外之死让花千骨几近崩溃、彻底绝望，突破白子画的封印，成为妖神。白子画为引导花千骨回归正道，孤身来到妖神殿陪在她身边。最后得知白子画为她付出的真相和情意的花千骨，决定以死让天下恢复安宁，白子画亦决定以死相随...</p>
+		</div>
+		<!--故事概要结束-->
+		
+		<!--角色介绍开始-->
+		
+		<div class="container page-header">
+			<div class="">
+				<h2 class="navbar-text">故事概要 <small>改编自fresh果同名小说</small></h2>
+			</div>	
+		</div>
+		<!-- Indicates a successful or positive action -->
+		<div class="container well a1 " id="a1">
+			<div class="row">
+				<div  class="col-md-3"><img src="img/r1.jpg" class="img-responsive img-rounded img-a1"></div>
+				<div class="col-md-9">
+					<h3>白子画/墨冰仙</h3>
+					<p>长留上仙，白衣描似画，横霜染风华。淡然带着冰冷的目光，流泻如水如月华。超凡而孤高，冰凉而淡漠，温润如玉又云淡风清。其师传位于他之时曾说：“子画在，可保长留千年基业，可守仙界百年平安。” 长久以来，他既要牺牲自己匡扶天下，又要呕心沥血教导保护小骨。 一生不负长留，不负六界，不负众生，不负任何人，唯独负了自己的一世韶光。 墨冰仙是白子画在人间为救小骨全家所起的化名。</p>
+				</div>
+			</div>
+		</div>
+
+		<div class="container well a2" id="a2">
+			<div class="row">
+				
+				<div class="col-md-9">
+					<h3>白子画/墨冰仙</h3>
+					<p>长留上仙，白衣描似画，横霜染风华。淡然带着冰冷的目光，流泻如水如月华。超凡而孤高，冰凉而淡漠，温润如玉又云淡风清。其师传位于他之时曾说：“子画在，可保长留千年基业，可守仙界百年平安。” 长久以来，他既要牺牲自己匡扶天下，又要呕心沥血教导保护小骨。 一生不负长留，不负六界，不负众生，不负任何人，唯独负了自己的一世韶光。 墨冰仙是白子画在人间为救小骨全家所起的化名。</p>
+				</div>
+				<div  class="col-md-3"><img src="img/r2.jpg" class="img-responsive img-rounded img-a1"></div>
+			</div>
+		</div>
+		
+		<div class="container well a3 " id="a3">
+			<div class="row">
+				<div  class="col-md-3"><img src="img/r3.jpg" class="img-responsive img-rounded img-a1"></div>
+				<div class="col-md-9">
+					<h3>白子画/墨冰仙</h3>
+					<p>长留上仙，白衣描似画，横霜染风华。淡然带着冰冷的目光，流泻如水如月华。超凡而孤高，冰凉而淡漠，温润如玉又云淡风清。其师传位于他之时曾说：“子画在，可保长留千年基业，可守仙界百年平安。” 长久以来，他既要牺牲自己匡扶天下，又要呕心沥血教导保护小骨。 一生不负长留，不负六界，不负众生，不负任何人，唯独负了自己的一世韶光。 墨冰仙是白子画在人间为救小骨全家所起的化名。</p>
+				</div>
+			</div>
+		</div>
+
+		<div class="container well a4 " id="a4">
+			<div class="row">
+				
+				<div class="col-md-9">
+					<h3>白子画/墨冰仙</h3>
+					<p>长留上仙，白衣描似画，横霜染风华。淡然带着冰冷的目光，流泻如水如月华。超凡而孤高，冰凉而淡漠，温润如玉又云淡风清。其师传位于他之时曾说：“子画在，可保长留千年基业，可守仙界百年平安。” 长久以来，他既要牺牲自己匡扶天下，又要呕心沥血教导保护小骨。 一生不负长留，不负六界，不负众生，不负任何人，唯独负了自己的一世韶光。 墨冰仙是白子画在人间为救小骨全家所起的化名。</p>
+				</div>
+				<div  class="col-md-3"><img src="img/r4.jpg" class="img-responsive img-rounded img-a1"></div>
+			</div>
+		</div>
+		<!--角色介绍结束-->
+		<!--音乐开始-->
+		<div class="container page-header">
+			
+				<h2 class="navbar-text">音乐  <small>唯美音乐</small></h2>
+			
+		</div>
+		<div class="container">
+			<div class="row">
+				
+				<div class="col-md-3">
+					<audio id="music-audio" controls="controls" src="pianwei.mp3" style="width: 100%;"></audio>
+					<div class="musiczhuan">
+						<img src="img/musichead1.jpg" id="img-music"/>
+					</div>
+				</div>
+				<div  class="col-md-9">
+						<table class="table">
+							<tr><th>歌曲名</th><th>演唱人</th><th>类型</th><th>播放</th></tr>
+							<tr><td>不可说</td><td>霍建华/赵丽颖</td><td>片尾曲</td><td><i data-img="img/musichead1.jpg" data-musicurl="pianwei.mp3" class="glyphicon glyphicon-expand btnmusic"></i></td></tr>
+							<tr><td>心之火</td><td>彭佳慧 F.I.R</td><td>片头曲</td><td><i data-img="img/musichead2.jpg" data-musicurl="fire.mp3" class="glyphicon glyphicon-expand btnmusic"></i></td></tr>
+							<tr><td>花签</td><td>真妮	</td><td>插曲</td><td><i  data-img="img/musichead3.jpg" data-musicurl="huaqian.mp3"class="glyphicon glyphicon-expand btnmusic"></i></td></tr>
+						</table>
+				</div>
+			</div>
+		</div>
+		<!--音乐结束-->
+		
+		<div class="modal-footer">
+			版权所有：@2017 xxxx 欢迎收看
+		</div>
+		
+		<script type="text/javascript">
+			document.getElementById("music-audio").onplay = function(){
+				 $(".musiczhuan img").css("animation-play-state","running")
+			}
+			
+			document.getElementById("music-audio").onpause = function(){
+				 $(".musiczhuan img").css("animation-play-state","paused")
+			}
+			
+			$(".btnmusic").click(function(){
+				var rel = $(this).attr("data-musicurl");
+				$("#music-audio").attr("src",rel);
+				$("#music-audio").get(0).play();
+				$("#img-music").attr("src",$(this).attr("data-img"));
+			})
+			
+			
+		</script>
+	</body>
+
+</html>

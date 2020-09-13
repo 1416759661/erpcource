@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<style type="text/css">
+			*{
+				margin: 0;
+				padding: 0;
+			}
+			#box1{
+				width: 300px;
+			    height: 300px;
+			    background-color: seagreen;
+			    background-image: url(img/bg001.png);
+			    background-repeat: repeat-x;
+			    
+			}
+			.title{
+				height: 30px;
+				list-style: none;
+			}
+			.title li{
+				height: 30px;
+				line-height: 30px;
+				width: 100px;
+				float:left;
+				text-align: center;
+			}
+			
+			.title li.current{
+				background-image: url(img/bg002.png);
+			}
+			.item{
+				display: none;
+			}
+			div.current{
+				display: block;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="box1">
+			<ul class="title">
+				<li class="current">女人</li>				
+				<li>情感</li>
+				<li>亲子</li>
+			</ul>
+			<div class="item current">
+				<img src="img/1.png"/>
+			</div>
+			<div class="item">
+				2
+			</div>
+			<div class="item">
+				3
+			</div>
+		</div>
+	<script src="js/jquery-1.11.0.js" type="text/javascript" charset="utf-8"></script>	
+	<script type="text/javascript">
+		$(".title>li").mouseenter(function(){
+			$(this).addClass("current").siblings().removeClass("current");//鼠标移动到哪个li上面的时候，就给他添加一个current，其他的同辈元素移除current样式
+			var index=$(".title>li").index(this);//返回当前li在所有li中的索引，索引是从0开始的
+			$("div.item").hide().eq(index).show();
+		});
+	</script>
+	</body>
+</html>

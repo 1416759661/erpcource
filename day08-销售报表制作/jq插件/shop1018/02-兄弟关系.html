@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			#box1{
+				width: 200px;
+				height: 200px;
+				background-color: darkcyan;
+				position: absolute;
+				left: 0;
+				top:0;
+				z-index:1;
+			}
+			
+			#box2{
+				width: 100px;
+				height:100px;
+				background-color: sienna;
+				position: absolute;
+				left:10px;
+				top:10px;
+				z-index:100;
+			}
+		</style>
+		<!--
+			兄弟关系：z-index属性生效的情况下，哪个大，哪个就在上面。
+		-->
+	</head>
+	<body>
+		<div id="box1">
+				box1
+		</div>
+		<div id="box2">
+			box2
+		</div>
+	</body>
+</html>

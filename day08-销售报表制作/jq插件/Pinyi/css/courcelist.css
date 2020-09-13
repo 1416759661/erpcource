@@ -1,0 +1,78 @@
+#maincontent .path
+{
+	padding-top: 48px;
+}
+
+#maincontent .path a
+{
+	color: #000;
+}
+
+.article h1
+{
+	font-size: 22px;
+	color: #D53B33;
+	text-align: center;
+	padding-top: 58px;
+}
+
+.article p
+{
+	text-align: center;
+	padding: 20px 0;
+}
+
+.article .content p
+{
+	text-align: left;
+	border-bottom: solid 2px #D16D57;
+	padding: 0;
+	text-align: center;
+}
+
+.article .content p span
+{
+	display: block;
+	width: 100px;
+	background-color:#D16D57 ;
+	height: 32px;
+	line-height: 32px;
+	color: #fff;
+	font-size: 14px;
+	border-top-left-radius: 5px;
+	border-top-right-radius: 5px;
+}
+.article .content .lista
+{
+	padding:50px 0;
+}
+.article .content .lista a
+{
+	float:left;
+	width: 100px;
+	height: 30px;
+	background-color: #D43B33;
+	text-align: center;
+	line-height: 30px;
+	margin-right: 10px;
+	color:#fff;
+}
+
+.article .content .description
+{
+	line-height: 24px;
+	padding: 20px 0;
+}
+
+
+
+.pager
+{
+	color: #B8200D;
+	padding: 20px 0;
+}
+
+.pager a
+{
+	color: #B8200D;margin-right: 20px;
+}

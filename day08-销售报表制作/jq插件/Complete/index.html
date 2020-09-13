@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="css/completer.css"/>
+		<style type="text/css">
+			.aaa{
+				background-color: red!important;
+			}
+		</style>
+	</head>
+	<body>
+		需求：
+		例1：邮箱地址补全
+		<input type="text" name="tbemail" id="tbemail"/>
+		
+		
+		例2：时间的补全
+		<input type="text" name="tbtime" id="tbtime"/>
+		
+		例3：网址的补全
+		<input type="text" name="tbnet" id="tbnet"/>
+		
+		例4: 关键字的补全
+		<input type="text" name="tbkey" id="tbkey"/>
+		
+		<script src="js/jquery-1.11.0.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/completer.min.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			//邮件地址自动补全
+			$("#tbemail").completer({
+					separator: "@",//间隔符号
+					itemTag:"li",//默认标签
+					position:"bottom",//列表展示的位置
+					selectedClass:"aaa",
+					source: ["163.com", "qq.com", "126.com", "139.com", "189.com","gmail.com", "hotmail.com", "icloud.com"],
+					//source代表要补全的后缀
+					complete:function(){
+						console.log("输入完成!");
+					}
+			});		
+			
+			
+			//时间自动补全
+			 $("#tbtime").completer({
+					filter: function(val) {//如果你输入的时间是26:30 filter起过滤的作用
+						val = val.replace(/\D/g, "").substr(0, 2);
+						if(val) {
+							val = parseInt(val, 10) || 0;
+							val = val > 23 ? 23 : val < 10 ? "0" + val : val;
+						}
+						return val;
+					},
+					separator: ":",
+					source: ["00", "05", "10", "15", "20", "25", "30", "35", "40", "45", "50", "55"]
+				});
+				
+			//网址的补全
+			$("#tbnet").completer({
+					separator: ".",
+					source: ["com", "cn", "net", "me", "tm"],
+					complete:function(){
+						location.href="http://www."+$("#tbnet").val();
+					}
+			});		
+			
+			
+			//关键字的补全
+			$("#tbkey").completer({
+					separator:"",
+					suggest:true,
+					source: ["圣诞节去哪里玩", "圣诞节礼物", "圣诞老人", "哪里有圣诞树卖", "圣诞树哪里便宜"],
+					complete:function(){
+						
+					}
+			});		
+			
+			
+		</script>
+	</body>
+</html>

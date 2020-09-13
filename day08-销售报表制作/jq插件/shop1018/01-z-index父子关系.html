@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			#box1{
+				width: 200px;
+				height: 200px;
+				background-color: darkcyan;
+				position: absolute;
+				left:0;
+				top:0;
+			/*	z-index: 100;*/
+			}
+			#box2{
+				width: 100px;
+				height:100px;
+				background-color:salmon;
+				z-index:-1000;
+				position: absolute;
+				left:0;
+				top:0;
+			}
+			/*
+			 * 要想让儿子显示在父亲的下面条件： 
+			 * 父亲的z-index属性没有生效，儿子的z-index小于0  
+			 要让父亲的z-index属性没有生效有两种情况：
+			 1、父亲没有z-index这样一个属性
+			 2、父亲没有position属性
+			 */
+		</style>
+	</head>
+	<body>
+		<div id="box1">box1 是父亲
+			<div id="box2">
+				box2 是儿子
+				
+			</div>
+		</div>
+	</body>
+</html>

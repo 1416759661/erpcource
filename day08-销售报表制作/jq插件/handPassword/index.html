@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<style type="text/css">
+			#gesturepwd{
+				position: relative;
+			}
+		</style>
+		<script src="js/jquery-2.1.4.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/jquery.gesture.password.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+	<body>
+		<div id="gesturepwd">
+		</div>
+		<script type="text/javascript">
+			$("#gesturepwd").GesturePasswd({
+				backgroundColor:"green",  //背景色
+				color:"#FFFFFF",   //圆圈颜色
+				roundRadii:25,    //大圆点的半径
+				pointRadii:20, //大圆点被选中时显示的圆心的半径
+				space:50,  //大圆点之间的间隙
+				width:300,   //整个组件的宽度
+				height:300,  //整个组件的高度
+				lineColor:"#cceedd",   //用户划出线条的颜色
+				zindex :100  //整个组件的css z-index属性
+			});
+			
+			$("#gesturepwd").on("hasPasswd", function(e, passwd) {
+			console.log("您输入的密码是："+passwd);
+			var result;
+			if(passwd == "1235789") {
+				result = true;
+			} else {
+				result = false;
+			}
+
+			if(result == true) {
+				$("#gesturepwd").trigger("passwdRight");//触发passwdRight事件， 让线条变绿
+				setTimeout(function() {
+
+					//密码验证正确后的其他操作，打开新的页面等。。。
+					alert("密码正确！")
+				}, 500); //延迟半秒以照顾视觉效果
+			} else {
+				$("#gesturepwd").trigger("passwdWrong");//触发passwdWrong事件， 让线条变红
+
+				//密码验证错误后的其他操作。。。
+
+			}
+		});
+		</script>
+	</body>
+</html>

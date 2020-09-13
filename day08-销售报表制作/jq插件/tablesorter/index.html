@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+	</head>
+	<body>
+		<table border="1" cellpadding="0" cellspacing="0" id="sortTable" class="tablesorter">
+			<thead>
+				<tr>
+					<th>序号</th>
+					<th>地址</th>
+					<th>姓名</th>
+					<th>年龄</th>
+					<th>成绩</th>
+					<th>创建日期</th>
+				</tr>
+			</thead>
+			<tr>
+				<td width="53">1</td>
+				<td width="181">山西省长治市</td>
+				<td width="117">赵磊</td>
+				<td width="117">24</td>
+				<td width="117">优</td>
+				<td width="120">2006.10.10</td>
+			</tr>
+			<tr>
+				<td>2</td>
+				<td>山西省太原市</td>
+				<td>李清</td>
+				<td>30</td>
+				<td width="117">优</td>
+				<td>2008.12.30</td>
+			</tr>
+			<tr>
+				<td>3</td>
+				<td>河南省郑州市</td>
+				<td>常建坤</td>
+				<td>51</td>
+				<td width="117">良</td>
+				<td>2002.08.30</td>
+			</tr>
+			<tr>
+				<td>4</td>
+				<td>山东省济南市</td>
+				<td>张耀</td>
+				<td>20</td>
+				<td width="117">优</td>
+				<td>2001.01.05</td>
+			</tr>
+			<tr>
+				<td>5</td>
+				<td>四川省成都市</td>
+				<td>唐骏</td>
+				<td>15</td>
+				<td width="117">良</td>
+				<td>2005.07.08</td>
+			</tr>
+			<tr>
+				<td>6</td>
+				<td>广东省广州市</td>
+				<td>安意如 </td>
+				<td>36</td>
+				<td width="117">中</td>
+				<td>2006.04.30</td>
+			</tr>
+			<tr>
+				<td>7</td>
+				<td>湖南省长沙市</td>
+				<td>何马</td>
+				<td>28</td>
+				<td width="117">良</td>
+				<td>2007.12.12</td>
+			</tr>
+			<tr>
+				<td>8</td>
+				<td>湖北省武汉市</td>
+				<td>苏小白</td>
+				<td>41</td>
+				<td width="117">差</td>
+				<td>2009.05.06</td>
+			</tr>
+			<tr>
+				<td>9</td>
+				<td>江苏省杭州市</td>
+				<td>饶尚宽</td>
+				<td>22</td>
+				<td width="117">良</td>
+				<td>2010.12.10</td>
+			</tr>
+			<tr>
+				<td>10</td>
+				<td>陕西省西安市</td>
+				<td>石晓娜</td>
+				<td>15</td>
+				<td width="117">良</td>
+				<td>2003.03.05</td>
+			</tr>
+		</table>
+		<input type="button" name="btnopt" id="btnopt" value="点击按年龄排序" />
+		<script src="js/jquery-1.11.0.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/jquery.tablesorter.min.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			//$("#sortTable").tablesorter(); //对所有的列排序
+			//禁用第二列排序
+//			$("#sortTable").tablesorter({
+//				headers:{1:{sorter:false}}//禁用索引为1 的列排序
+//			});
+
+			$.tablesorter.addParser({
+				id: "mygrade", //给排序规则指定一个唯一的ID
+				is:function(s) {
+					return false;
+				},
+				format:function(s) {
+					return s.toLowerCase().replace(/优/, 1).replace(/良/, 2).replace(/中/, 3).replace(/差/, 4); //将中文换成数字
+				},
+				type: "numeric" //按数值排序
+			});
+
+			$("#sortTable").tablesorter({
+				headers: {
+					4: {
+						sorter: "mygrade"
+					}
+				}
+			}); 
+			
+			$("#btnopt").click(function(){
+				var ths = $("#sortTable th"); //取得所有th元素
+				ths.eq(3).trigger("click"); //模拟 点击事件
+			});
+			
+			
+		</script>
+	</body>
+</html>

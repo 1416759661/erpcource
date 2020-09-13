@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			#box1{
+				width:200px;
+				height:300px;
+				background-color: green;
+				position: fixed;
+				right:-200px;
+				top:50px;
+			}
+			#btnbox{
+				position: absolute;
+				width:25px;
+				height: 60px;
+				background-color: aquamarine;
+				left: -25px;
+				top:120px;
+				text-align: center;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="box1">
+			<div id="btnbox">
+				分享到
+			</div>
+			<div id="contentbox">
+				
+			</div>
+		</div>
+		<script src="js/jquery-1.12.2.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			//mouseenter  mouseleave 执行的时候不会触发父元素的事件
+			//mouserover  mouseout   执行的时候，会进行事件冒泡，触发父元素的对应事件
+//			$("#btnbox").mouseenter(function(){
+//				$("#box1").animate({"right":"0"});
+//			});
+//			$("#box1").mouseleave(function(){
+//				console.log("123");
+//				$("#box1").animate({"right":"-200px"});
+//			});
+			
+			$("#btnbox").hover(function(){
+				$("#box1").animate({"right":"0"});
+			},
+			function(){
+				//$("#box1").animate({"right":"-200px"});
+			});
+			
+			
+		</script>
+		
+	</body>
+</html>

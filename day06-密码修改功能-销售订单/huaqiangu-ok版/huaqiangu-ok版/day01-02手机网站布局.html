@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta id="viewport" name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1; user-scalable=no;">
+		<style type="text/css">
+			*{
+				margin: 0;
+				padding: 0;
+			}
+			header{
+				width: 100%;
+				height: 35px;
+				line-height: 35px;
+				text-align: center;
+				font-size: 16px;
+				background-color: #EEEEEE;
+				position: fixed;
+				top: 0;
+				left: 0;
+			}
+			footer{
+				position: fixed;
+				bottom: 0;
+				left: 0;
+				width: 100%;
+				background-color: #eee;
+				height: 35px;
+				line-height: 35px;
+				text-align: center;
+			}
+			
+			article{
+				width: 100%;
+				display:block ;
+				position: absolute;
+				top: 35px;
+				left: 0;
+				height:calc(100% - 70px);
+				overflow: auto;
+			}
+			article ul{
+				width: 100%;
+			}
+			article ul li{
+				height:60px;
+				border-bottom: solid 1px #eee;
+				width:100%;
+				line-height: 30px;
+				padding: 5px 0;
+			}
+			
+			article ul li:nth-child(2n)
+			{
+				background-color: #efefff;
+			}
+			
+			ul li p{
+				padding-left: 5px;
+				position: relative;
+			}
+			
+			ul li p span{
+				position: absolute;
+				right: 5px;
+			}
+		</style>
+	</head>
+	<body>
+		<header>
+				招聘UI大神
+		</header>
+		<article>
+			<ul>
+				<li>
+					<p>UI设计工程师<span>15K</span></p>
+					<p>新加坡电信成都分公司<span>高新区</span></p>
+				</li>
+				<li>
+					<p>UI设计工程师<span>15K</span></p>
+					<p>阿里巴巴成都分公司<span>高新区</span></p>
+				</li>
+				<li>
+					<p>UI设计工程师<span>15K</span></p>
+					<p>微软中国成都分公司<span>高新区</span></p>
+				</li>
+				<li>
+					<p>UI设计工程师<span>15K</span></p>
+					<p>阿里巴巴成都分公司<span>高新区</span></p>
+				</li>
+				<li>
+					<p>UI设计工程师<span>15K</span></p>
+					<p>阿里巴巴成都分公司<span>高新区</span></p>
+				</li>
+				<li>
+					<p>UI设计工程师<span>15K</span></p>
+					<p>中国移动成都分公司<span>高新区</span></p>
+				</li>
+				
+				<li>
+					<p>UI设计工程师<span>15K</span></p>
+					<p>百度成都分公司<span>高新区</span></p>
+				</li>
+				<li>
+					<p>UI设计工程师<span>15K</span></p>
+					<p>美团成都分公司<span>高新区</span></p>
+				</li>
+			</ul>
+		</article>
+		<footer>
+			<address>
+				天府新谷5号楼
+			</address>
+		</footer>
+	</body>
+</html>

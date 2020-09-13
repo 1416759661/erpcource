@@ -1,0 +1,140 @@
+/*标题开始*/
+
+#maincontent .title
+{
+	text-align: center;
+}
+
+#maincontent .title p.entitle
+{
+	font-size: 16px;
+	color: #000;
+	padding-top: 52px;
+}
+
+#maincontent .title p.zhtitle
+{
+	font-size: 18px;
+	color: #000;
+	font-weight: bold;
+}
+
+/*标题结束*/
+
+#maincontent ul.tap
+{
+	width:667px;
+	margin: 0 auto;
+	padding-top: 44px;
+}
+/*#maincontent ul.tap li 表示id为maincontent节点下面的携带了tap样式的ul 下面的li  注意ul 和.tap之间不能有空格*/
+#maincontent ul.tap li  
+{
+	width: 333px;
+	float: left;
+	height:35px;
+	text-align: center;
+	background-color: #FAFAFA;
+	line-height: 35px;
+	font-size: 16px;
+}
+
+#maincontent ul.tap li.current  /*对当前的li定义一个特殊的样式  li.current  li后面打上点，再携带一个样式 这样优先级就比前面普通的li的优先级高，所以后面可以重写前面的定义的样式*/
+{
+	height:42px;
+	width: 334px;
+	background-image:url(../images/tapbg.png);
+	background-repeat:no-repeat;	
+}
+
+
+
+
+#maincontent ul.newslist
+{
+	padding-top:40px;
+}
+
+#maincontent ul.newslist li
+{
+	width: 480px;
+	height: 200px;
+	background-color:#F2F2F2;
+	float:left;
+	margin-right: 20px;
+	margin-top: 20px;
+}
+
+#maincontent ul.newslist li a
+{
+	display: block;
+	width: 200px;
+	float: left;
+	margin-right: 30px;
+}
+#maincontent ul.newslist li a img
+{
+	vertical-align: middle;/*去掉图片和a标签的3像素距离*/
+}
+
+#maincontent ul.newslist li .newslistright
+{
+	float: left;
+	width: 250px;
+	height: 200px;
+}
+#maincontent ul.newslist li .newslistright p
+{
+	padding-top: 10px;
+	color: #757678;
+	padding-right: 10px;
+}
+#maincontent ul.newslist li .newslistright p.first
+{
+	font-size: 16px;
+	padding-top: 28px;
+	
+}
+#maincontent ul.newslist li .newslistright p.last
+{
+	line-height: 20px;
+}
+
+
+
+/*分页开始*/
+.pager
+{
+	padding-top: 30px;
+	padding-bottom:60px;
+}
+.pager a
+{
+	background-color: #D8D8D8;
+	display: block;
+	width: 36px;
+	height: 36px;
+	text-align: center;
+	color:#fff;
+	float: left;
+	line-height: 36px;
+	margin-right: 2px;
+}
+
+.pager a.currentpage
+{
+	background-color: #B50900;
+}
+
+.pager a.first
+{
+	border-top-left-radius: 5px;
+	border-bottom-left-radius: 5px;
+}
+.pager a.last
+{
+	border-top-right-radius: 5px;
+	border-bottom-right-radius: 5px;
+}
+
+/*分页结束*/

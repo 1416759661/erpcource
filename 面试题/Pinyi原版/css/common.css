@@ -1,0 +1,186 @@
+/*头部开始*/
+.innerbox{
+	width: 1000px;
+	margin: 0 auto;
+}
+#header{
+	height: 350px;
+	min-width: 1000px;
+}
+#navbox{
+	/*height: 72px;*/
+	background-color: #D43B33;
+}
+
+
+#navbox a.logoa{
+	display: block;
+	width: 118px;
+	float: left;/*向左边浮动*/
+}
+
+#navbox a.logoa img{
+	display: block;
+	vertical-align: middle;	
+}
+
+/*菜单开始  ul是一级菜单的盒子  向右边浮动 包括对二级菜单的ul都设置了向右浮动*/
+#navbox ul{
+	float:right;
+}
+
+#navbox ul li{
+	float: left;/*这里定义了#navbox导航下面的所有的li 都向左浮动，定义了这个属性之后，一级菜单和二级菜单的li都向左浮动了*/
+	height: 72px;/*这个样式不仅定义到了一级菜单的li上面，也定义了二级菜单的li上面，我们的二级菜单不需要72像素这么高，也不需要72像素的行高，也不需要38px的margin-right,所有后面需要把他的样式给干掉*/
+	line-height: 72px;
+	margin-right: 38px;	
+	position: relative;
+}
+
+#navbox ul li:hover/*hover 是鼠标移动上去的效果，这里鼠标移动上去后,给每一个li都加了一个背景，包括了二级菜单的li,所以二级菜单的li也有这样一个背景，其实二级菜单是不需要这个背景的，后面也需要干掉*/
+{
+	background-image: url(../images/nav_bg.png);
+	background-repeat:no-repeat;
+	background-position: bottom;
+}
+
+#navbox ul li:hover ul.submenu /*当鼠标移动到每一个li（包括二级菜单的li）上面的时候，就就让li里面的携带了submenu样式的ul显示出来*/
+{
+	display: block;
+}
+
+#navbox ul li.current /*给导航下面的所有的li中携带了current样式的li加上一个背景，表示是当前的页面*/
+{
+	background-image: url(../images/nav_bg.png);
+	background-repeat:no-repeat;
+	background-position: bottom;
+}
+
+#navbox ul li.lastli/*导航里面的所有的li中携带了lastli样式的这个导航单独设置margin-right*/
+{
+	margin-right:20px;
+}
+
+#navbox ul li a{/*设置导航里面的所有的a的字体大小和颜色*/
+	font-size: 16px;
+	color:#fff;	
+}
+
+#navbox ul.submenu{ /*每一个二级菜单的盒子*/
+	padding-top: 10px;/*设置盒子内容与盒子顶部的距离*/
+	position: absolute; /*对每一个二级菜单绝对定位*/
+	left:-15px;/*定位是需要配合left,top ,right,bottom中的两个进行定位，但是不能是上和下  左和右*/
+	top:60px;
+	float: none; /*把二级菜单的浮动给干掉*/
+	background-color: #D43B33;
+	width: 110px;
+	display: none;
+}
+
+#navbox ul.submenu li
+{
+	  float:none;/*前面对所有的li都设置了向左浮动，而我们的二级菜单中的li不需要向左浮动，所以这里重新设置了浮动为none*/
+	  height:30px;/*前面对所有的li都设置了高度72像素，这里对二级菜单的li重新定义高度*/
+	  line-height:30px;/*重新定义行高*/
+	  border-bottom: solid 1px #fff;/*每一个二级菜单li的下划线*/
+	  margin-right: 0;/*前面定义一级菜单的时候定义了一个38像素的margin-right,二级菜单的li不需要，所以就重新设置为0*/
+	  text-align: center;/*让每一个li里面的文字居中*/
+}
+
+#navbox ul.submenu li.lastli
+{
+	border-bottom: 0;/*让二级菜单下面的携带了lastli的li下边框为0*/
+}
+
+#navbox ul.submenu li:hover{
+	background-image: none;/*当鼠标移动到二级菜单的每一个li上面的时候，让他不出现背景，这个背景是定义一级菜单的时候统一定义的*/
+}
+
+
+/*菜单结束*/
+
+.banner{
+	background-image: url(../images/banner.png);
+	height: 280px;
+	background-repeat: no-repeat;
+	background-size: 100% 276px;
+}
+
+/*头部结束*/
+
+
+/*底部开始*/
+#footer{
+	height: 316px;
+	background-image: url(../images/bottombg.png);
+}
+#footer .innerbox{
+	padding-top: 50px;
+}
+
+#footer img
+{
+	float: left;
+	margin-right: 88px;
+	
+}
+
+#footer ul
+{
+	float: left;
+}
+
+#footer ul li
+{
+	color: #FCF8F8;
+	padding-bottom: 10px;
+}
+
+#footer ul li.first
+{
+	font-size: 16px;
+	padding-bottom: 24px;
+}
+#footer ul li.last
+{
+	color: #979797;
+	padding-top: 45px;
+}
+/*底部结束*/
+
+
+/*右侧广告位开始*/
+
+body {
+	background-image: url(about:blank);
+	background-attachment: fixed
+}
+
+
+#rightadv
+{
+	width: 72px;
+	height:320px;
+	background-color: #D43B33;
+	position: fixed; /*ie6不支持此属性*/
+	_position:absolute;
+	top:200px;
+	right:20px;
+}
+#rightadv li
+{
+	position: relative;
+}
+#rightadv li:hover img.code2
+{
+	display: block;
+}
+#rightadv img.code2
+{
+	position: absolute;
+	left:-159px;
+	top:9px;
+	display: none;
+}
+
+/*右侧广告位结束*/

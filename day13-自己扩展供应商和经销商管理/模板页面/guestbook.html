@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			table{
+				width:800px;
+				margin: 0 auto;
+				border-collapse: collapse;
+				font-size: 14px;
+				margin-bottom: 5px;
+			}
+			
+			table td{
+				border: solid 1px #eee;
+				padding-right: 5px;
+				height:30px;
+				font-family: "微软雅黑";
+			}
+			
+			table td.leftlable{
+				width: 100px;
+				text-align: right;
+			}
+			table td.centerlable{
+				width: 100px;
+				text-align: center;
+			}
+			
+			table td p{
+				margin-left: 5px;
+			}
+			
+			table td input{
+				width: 200px;
+				border: solid 1px #eee;
+				margin-left: 5px;
+				height:20px;
+			}
+			
+			table td textarea{
+				width: 500px;
+				height:150px;
+				border: solid 1px #eee;
+				margin: 5px;		
+			}
+			
+			#btnsave{
+				width: 80px;
+				background-color: darkorange;
+				color: white;
+				border:solid 1px #FF8C00;
+				height: 24px;
+			}
+		</style>
+	</head>
+	<body>
+		<form action="/news/newsadd" method="post">
+			<table cellpadding="0" cellspacing="0">
+				<tr>
+					<td class="centerlable">
+						<p>张三</p>	
+						<p>2016-9-20</p>	
+					</td>
+					<td>
+						<p>TEL:15312344321</p>
+						<p>大家好啊，我很好啊，来吐槽啊！</p>
+					</td>
+				</tr>
+				<tr>
+					<td class="centerlable">
+						<p>张三</p>	
+						<p>2016-9-20</p>	
+					</td>
+					<td>
+						<p>TEL:15312344321</p>
+						<p>大家好啊，我很好啊，来吐槽啊！</p>
+					</td>
+				</tr>
+				<tr>
+					<td class="centerlable">
+						<p>张三</p>	
+						<p>2016-9-20</p>	
+					</td>
+					<td>
+						<p>TEL:15312344321</p>
+						<p>大家好啊，我很好啊，来吐槽啊！</p>
+					</td>
+				</tr>
+			</table>	
+			
+			
+			<table cellpadding="0" cellspacing="0">
+				<tr><td class="leftlable">姓名</td><td><input type="text" name="tbauthor" id="tbauthor"/></td></tr>
+				<tr><td class="leftlable">电话</td><td><input type="text" name="tbsource" id="tbsource"/></td></tr>
+				<tr><td class="leftlable">内容</td><td><textarea name="tbcontent" id="tbcontent" rows="5" cols="20"></textarea></td></tr>
+				<tr><td class="leftlable">&nbsp;</td><td><input type="submit" id="btnsave" value="提交留言"/></td></tr>
+			</table>	
+		</form>
+	</body>
+</html>
